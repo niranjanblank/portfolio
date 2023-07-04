@@ -2,7 +2,7 @@ import { BsFillMoonStarsFill } from "react-icons/bs"
 
 const Navbar = () =>{
     return (
-        <section className="min-h-screen">
+   
         <nav className="py-10 mb-12 flex justify-between">
           <h1 className="text-xl font-burtons">Niranjan Shah</h1>
           <ul className='flex items-center'>
@@ -14,7 +14,6 @@ const Navbar = () =>{
               </li>
           </ul>
         </nav>
-      </section>
     )
 }
 
