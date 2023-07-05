@@ -21,9 +21,13 @@ const Tech = () => {
     return (
         <div>
             <h3 className="text-3xl py-1 mt-10">Tech I Use</h3>
-            <div className="flex gap-10">
-                {tech_items.map(item=>{
-                    return (<TechCard src={item.src} alt={item.alt} label={item.label}/>)
+            <div className="flex flex-wrap justify-center items-center">
+                {tech_items.map(item => {
+                    return (
+                        <div className="m-2 w-auto sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+                            <TechCard src={item.src} alt={item.alt} label={item.label}/>
+                        </div>
+                    );
                 })}
             </div>
         </div>
