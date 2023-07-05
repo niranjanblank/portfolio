@@ -1,7 +1,7 @@
 
 import Intro from './Components/Intro'
 import Navbar from './Components/Navbar'
-import Tech from './Components/Tech'
+import Tech from './Components/Tech/Tech'
 
 
 export default function Home() {
