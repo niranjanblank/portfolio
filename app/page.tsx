@@ -5,7 +5,7 @@ import Tech from './Components/Tech/Tech'
 import recommerder_system from '../public/recommender_system.png'
 import sentiment from '../public/sentiment.png'
 import plant_vision from '../public/plant_vision.png'
-
+import airbnb from '../public/airbnb.png'
 import Image from 'next/image'
 
 export default function Home() {
@@ -37,16 +37,20 @@ export default function Home() {
           <h3 className="text-3xl py-1">Portfolio</h3>
           <p className="text-md py-2 leading-8 text-gray-800">Some of my works highlighting my skills are here</p>
         </div>
-        <div>
-          <div>  
-            <Image src={recommerder_system} alt="recommender_system"/>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
+          <div className=''>  
+            <Image src={recommerder_system} alt="recommender_system" className='rounded-lg'/>
           </div>
-          <div>  
-            <Image src={sentiment} alt="sentiment"/>
+          <div className=''>  
+            <Image src={sentiment} alt="sentiment" className='rounded-lg'/>
           </div>
-          <div>  
-            <Image src={plant_vision} alt="plant_vision"/>
+          <div className=''>  
+            <Image src={airbnb} alt="airbnb" className='rounded-lg'/>
           </div>
+          <div className=''>  
+            <Image src={plant_vision} alt="plant_vision" className='rounded-lg'/>
+          </div>
+          
         </div>
       </section>
     </main>
