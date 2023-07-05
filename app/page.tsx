@@ -1,4 +1,4 @@
-
+'use client'
 import Intro from './Components/Intro'
 import Navbar from './Components/Navbar'
 import Tech from './Components/Tech/Tech'
@@ -7,12 +7,24 @@ import sentiment from '../public/sentiment.png'
 import plant_vision from '../public/plant_vision.png'
 import airbnb from '../public/airbnb.png'
 import Image from 'next/image'
+import { useState } from 'react'
+
 
 export default function Home() {
+
+
+  const [darkMode, setDarkMode] = useState(false)
+
+  const onThemeChangeListener = () => {
+    console.log(darkMode)
+    setDarkMode(!darkMode)
+  }
+
   return (
-    <main className='bg-white px-10 md:px-20 lg:px-40' >
+    <div className={darkMode ? "dark": ""}>
+    <main className='bg-white px-10 md:px-20 lg:px-40  dark:bg-gray-900' >
       <section className="min-h-screen flex flex-col">
-        <Navbar/>
+        <Navbar onThemeChangeListener={onThemeChangeListener}/>
         <div className="flex-grow flex items-center justify-center">
          <Intro/>
         </div>
@@ -54,5 +66,6 @@ export default function Home() {
         </div>
       </section>
     </main>
+    </div>
   )
 }
