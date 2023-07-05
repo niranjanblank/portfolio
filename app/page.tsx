@@ -12,8 +12,8 @@ export default function Home() {
 
   const [darkMode, setDarkMode] = useState(false)
 
+  // theme changer function
   const onThemeChangeListener = () => {
-    console.log(darkMode)
     setDarkMode(!darkMode)
   }
 

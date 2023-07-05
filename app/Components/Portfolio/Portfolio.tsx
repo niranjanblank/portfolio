@@ -2,7 +2,6 @@ import recommerder_system from '../../../public/recommender_system.png'
 import sentiment from '../../../public/sentiment.png'
 import plant_vision from '../../../public/plant_vision.png'
 import airbnb from '../../../public/airbnb.png'
-import Image from 'next/image'
 import { PortfolioProp } from './interfaces'
 import PortfolioItem from './PortfolioItem'
 const Portfolio = () => {
@@ -27,7 +26,7 @@ const Portfolio = () => {
             // rendering the portfolio items
             portfolioItems.map(item => {
                 return (
-                    <PortfolioItem src={item.src} alt={item.alt} title={item.title} link={item.link}/>
+                    <PortfolioItem  key={item.title} src={item.src} alt={item.alt} title={item.title} link={item.link}/>
                 )
             })
            }

@@ -20,14 +20,14 @@ const Intro = () => {
             Skilled in all aspects of Data Science and ML. See my works below.</p>
         </div>
         <div className="text-5xl flex justify-center gap-16 pb-10 text-gray-600 dark:text-gray-400">
-            <AiFillFacebook/>
-            <AiFillLinkedin/>
-            <AiFillGithub/>
+            <a href="https://www.facebook.com/niranjanBlanK/" className="cursor-pointer"><AiFillFacebook/></a>
+            <a href="https://www.linkedin.com/in/niranjan-shah-7037921a4/" className="cursor-pointer"><AiFillLinkedin/></a>
+            <a href="https://github.com/niranjanblank" className="cursor-pointer"><AiFillGithub/></a>
         </div>
         <div className=" mx-auto rounded-full w-80 h-80 md:h-96 md:w-96"  >
             <Image src={centralImage} alt="" />
         </div>
-        </div>
+    </div>
     )
 }
 

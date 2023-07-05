@@ -1,6 +1,5 @@
 import Image from "next/image"
 import { PortfolioProp } from "./interfaces"
-import { BsGithub } from "react-icons/bs"
 
 const PortfolioItem:React.FC<PortfolioProp> = (prop) => {
     return (
