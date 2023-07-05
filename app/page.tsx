@@ -31,7 +31,7 @@ export default function Home() {
           <div className="md:text-center ">
             <h3 className="text-3xl py-1 dark:text-white ">Things about me</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-400 md:text-xl">
-              Since the beginning of my journey in the world of Data Science/Machine Learning, I've done lots of projects
+              Since the beginning of my journey in the world of Data Science/Machine Learning, I&apos;ve done lots of projects
               regarding <span className="text-teal-500"> Data Analysis</span>, <span className="text-teal-500"> Natural Language Processing</span>
               , <span className="text-teal-500"> Computer Vision</span> and many more.
             </p>
