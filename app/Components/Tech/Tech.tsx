@@ -19,8 +19,8 @@ const Tech = () => {
     ] 
 
     return (
-        <div>
-            <h3 className="text-3xl py-1 mt-10">Tech I Use</h3>
+        <div className="flex flex-col md:items-center" >
+            <h3 className="text-3xl py-1 mt-10 dark:text-white">Tech I Use</h3>
             <div className="flex flex-wrap justify-center items-center">
                 {tech_items.map(item => {
                     return (

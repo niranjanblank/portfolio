@@ -17,7 +17,7 @@ const Navbar:React.FC<{
               
               </li>
             <li>
-              <a href="#" className="bg-gradient-to-r from-cyan-500 to-teal-400 text-white px-4 py-2 rounded-md ml-8">Resume</a>
+              <a href="#" className="bg-gradient-to-r from-cyan-500 to-sky-400 text-white px-4 py-2 rounded-md ml-8">Resume</a>
               </li>
           </ul>
         </nav>
