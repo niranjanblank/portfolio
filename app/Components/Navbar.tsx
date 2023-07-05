@@ -1,10 +1,15 @@
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs"
-
+import {saveAs} from 'file-saver'
 const Navbar:React.FC<{
   onThemeChangeListener: () => void,
   darkMode: boolean
 
 }> = ({onThemeChangeListener, darkMode}) =>{
+
+    const cvDownloadHandler = () => {
+      saveAs('/niranjanshah_cv.pdf','niranjanshah_cv.pdf')
+    }
+
     return (
    
         <nav className="py-10 mb-12 flex justify-between">
@@ -17,7 +22,9 @@ const Navbar:React.FC<{
               
               </li>
             <li>
-              <a href="#" className="bg-gradient-to-r from-cyan-500 to-sky-400 text-white px-4 py-2 rounded-md ml-8">Resume</a>
+              <button 
+              onClick={cvDownloadHandler}
+              className="bg-gradient-to-r from-cyan-500 to-sky-400 text-white px-4 py-2 rounded-md ml-8">Resume</button>
               </li>
           </ul>
         </nav>
