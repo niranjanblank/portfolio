@@ -1,4 +1,5 @@
 'use client'
+import Footer from './Components/Footer/Footer'
 import Intro from './Components/Intro'
 import Navbar from './Components/Navbar'
 import Portfolio from './Components/Portfolio/Portfolio'
@@ -43,8 +44,9 @@ export default function Home() {
         </section>
         <section>
         <Portfolio/>
-        </section>
+        </section>    
     </main>
+    <Footer/>
     </div>
   )
 }
