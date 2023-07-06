@@ -19,19 +19,19 @@ const ContactForm = () => {
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4 text-black dark:text-gray-200 text-sm mt-4">
                     <div>
                         <label className="block ">Full name</label>
-                        <input className="block bg-gray-200 w-full rounded-sm py-2 px-2 text-black" placeholder="Name" name="name"/>
+                        <input className="block bg-gray-200 w-full rounded-sm py-2 px-2 text-black" placeholder="e.g. Richard Parker" name="name" type="text"/>
                     </div>
                     <div>
                         <label className="block ">Subject</label>
-                        <input className="block bg-gray-200 w-full rounded-sm py-2 px-2 text-black" placeholder="Name" name="subject"/>
+                        <input className="block bg-gray-200 w-full rounded-sm py-2 px-2 text-black" placeholder="e.g. Help me do this project " name="subject" type="text"/>
                     </div>
                     <div>
                         <label className="block">Email</label>
-                        <input className="block bg-gray-200 w-full rounded-sm py-2 px-2 text-black" placeholder="Name" name="email" type="email"/>
+                        <input className="block bg-gray-200 w-full rounded-sm py-2 px-2 text-black" placeholder="e.g. richardp@example.com" name="email" type="email"/>
                     </div>
                     <div>
                         <label className="block">Message</label>
-                        <textarea className="block bg-gray-200 w-full rounded-sm py-2 px-2 text-black" rows={4} placeholder="What do you want to say" name="message"></textarea>
+                        <textarea className="block bg-gray-200 w-full rounded-sm py-2 px-2 text-black" rows={4} placeholder="e.g. Lets work together" name="message"></textarea>
                     </div>
                     <button type="submit" disabled={state.submitting} className="bg-gradient-to-r from-cyan-500 to-sky-400 px-4 text-white py-2 rounded-md w-fit flex">Send Email</button>
                     <ValidationError errors={state.errors}/>
