@@ -62,9 +62,9 @@ const Portfolio = () => {
 
     return (
         <>
-        <div className='flex flex-col md:items-center'>
+        <div className='flex flex-col items-center'>
             <h3 className="text-3xl py-1 dark:text-white">Portfolio</h3>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-400 md:text-xl mb-4">Some of my works highlighting my skills are here</p>
+            <p className="text-md py-2 leading-8 text-gray-800 text-center dark:text-gray-400 md:text-xl mb-4">Some of my works highlighting my skills are here</p>
             </div>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
            {

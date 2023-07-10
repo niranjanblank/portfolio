@@ -29,7 +29,7 @@ export default function Home() {
         </section>
 
         <section>
-          <div className="md:text-center ">
+          <div className="text-center ">
             <h3 className="text-3xl py-1 dark:text-white ">Things about me</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-400 md:text-xl">
               Since the beginning of my journey in the world of Data Science/Machine Learning, I&apos;ve done lots of projects
