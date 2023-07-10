@@ -4,5 +4,12 @@ export interface PortfolioProp {
         src: StaticImageData,
         alt: string,
         title: string,
-        link: string
+        link: string,
+        desc: string,
+        tags: tags[]
+}
+
+interface tags {
+        tag: string,
+        color: string
 }
