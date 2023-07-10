@@ -13,7 +13,7 @@ const ContactForm = () => {
        console.log("Email sent")
     }
     return (
-        <div className="rounded-lg py-3 px-5  max-w-xl   flex flex-col">
+        <div className="rounded-lg py-3 md:px-5  max-w-xl   flex flex-col">
                 <h2 className="font-bold text-4xl pb-2 dark:text-white">Let&apos;s Chat: Unlocking Possibilities</h2>
                 <p className="text-sm dark:text-gray-200" >Need assistance? Don&apos;t worry, I&apos;m here to catch your queries like a ninja catches shurikens. Fill out the form below, and let the problem-solving begin!</p>
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4 text-black dark:text-gray-200 text-sm mt-4">

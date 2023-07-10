@@ -6,14 +6,14 @@ import { AiFillFacebook, AiFillGithub, AiFillLinkedin } from "react-icons/ai"
 
 const Footer = () => {
     return (
-        <div className="grid md:grid-cols-2 sm:grid-cols-1 bg-white dark:text-white dark:bg-gray-900 p-10 ">
-            <div className="w-full  flex flex-col sm:items-center md:items-end p-3 md:gap-10">
+        <div className="grid md:grid-cols-2 grid-cols-1 bg-white dark:text-white dark:bg-gray-900 p-10 ">
+            <div className="w-full  flex flex-col  md:items-end  py-3 md:px-3 md:gap-10 mb-10">
                 
-                <h1 className=" font-bold text-6xl">Niranjan Shah</h1>
+                <h1 className=" font-bold text-4xl  md:text-6xl">Niranjan Shah</h1>
                 
-                <p className="flex items-center gap-2 text-2xl "><FiMail/> niranjashah474@gmail.com</p>
-                <p className="flex items-center gap-2 text-2xl "><FaMapMarkerAlt/> Canberra, ACT, Australia</p>
-                <p className="flex items-center gap-2 text-2xl "><FaPhoneAlt/> (+61)432518736</p>
+                <p className="flex items-center gap-2 text-lg md:text-2xl "><FiMail/> niranjashah474@gmail.com</p>
+                <p className="flex items-center gap-2 text-lg md:text-2xl "><FaMapMarkerAlt/> Canberra, ACT, Australia</p>
+                <p className="flex items-center gap-2 text-lg md:text-2xl "><FaPhoneAlt/> (+61)432518736</p>
                 
                 <div className="text-5xl flex  gap-5 text-black-600 dark:text-white">
                         <a href="https://www.facebook.com/niranjanBlanK/" className="cursor-pointer"><AiFillFacebook/></a>
