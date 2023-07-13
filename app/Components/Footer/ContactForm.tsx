@@ -1,7 +1,8 @@
 import { useForm, ValidationError } from "@formspree/react";
 import { useFormik } from "formik";
 import * as Yup from "yup"
-
+import axios from 'axios'
+import {toast} from 'react-toastify'
 const ContactForm = () => {
 
     const formik = useFormik({
@@ -13,15 +14,14 @@ const ContactForm = () => {
         },
         onSubmit: async (values) => {
           try {
-            // const response = await axios.post('/api/email', values);
-            // setMailSent(response.data.isMailSent)
-            // if(response.data.isMailSent){
-            //   toast.success("Mail Sent")
-            //   setMailSent(false)
-            // }
-            // console.log(response.data);
+            const response = await axios.post('/api/email', values);
+  
+            // show toast if mail is sent
+            if(response.data.isMailSent){
+              toast.success("Mail Sent")
+            }
           } catch (error) {
-            // console.error(error);
+            console.error(error);
           }
         },
         validationSchema: Yup.object({
