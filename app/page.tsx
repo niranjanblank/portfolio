@@ -4,6 +4,8 @@ import Intro from './Components/Intro'
 import Navbar from './Components/Navbar'
 import Portfolio from './Components/Portfolio/Portfolio'
 import Tech from './Components/Tech/Tech'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 import { useState } from 'react'
 
@@ -20,6 +22,18 @@ export default function Home() {
 
   return (
     <div className={darkMode ? "dark": ""}>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        theme="colored"
+        />
     <main className='bg-white px-10 md:px-20 lg:px-40  dark:bg-gray-900 pb-10' >
         <section className="min-h-screen flex flex-col">
           <Navbar onThemeChangeListener={onThemeChangeListener} darkMode={darkMode}/>
