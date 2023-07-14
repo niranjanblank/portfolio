@@ -13,16 +13,22 @@ const ContactForm = () => {
           message: ''
         },
         onSubmit: async (values) => {
-          try {
-            const response = await axios.post('/api/email', values);
+          // try {
+            const response = await toast.promise(axios.post('/api/email', values),
+            {
+              pending: 'Sending Email',
+              success: 'Email Sent Successfully',
+              error: 'Email couldnt be sent 🤯'
+            })
+            
   
-            // show toast if mail is sent
-            if(response.data.isMailSent){
-              toast.success("Mail Sent")
-            }
-          } catch (error) {
-            console.error(error);
-          }
+          //   // show toast if mail is sent
+          //   if(response.data.isMailSent){
+          //     toast.success("Mail Sent")
+          //   }
+          // } catch (error) {
+          //   console.error(error);
+          // }
         },
         validationSchema: Yup.object({
           name: Yup.string()
@@ -76,7 +82,7 @@ const ContactForm = () => {
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
                         />
-                        {(formik.touched.email && formik.errors.email) && <p className="text-red-800 pt-2 text-xs">{formik.errors.email}</p>}
+                        {(formik.touched.email && formik.errors.email) && <p className="text-red-600 pt-2 text-xs">{formik.errors.email}</p>}
                     </div>
                     <div>
                         <label className="block">Message</label>
@@ -88,7 +94,7 @@ const ContactForm = () => {
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
                         ></textarea>
-                        {(formik.touched.message && formik.errors.message) && <p className="text-red-800 pt-2 text-xs">{formik.errors.message}</p>}
+                        {(formik.touched.message && formik.errors.message) && <p className="text-red-600 pt-2 text-xs">{formik.errors.message}</p>}
                     </div>
                     <button type="submit"  className=" bg-sky-400 hover:bg-sky-700 px-4 text-white py-2 rounded-md w-fit flex">Send Email</button>
 
