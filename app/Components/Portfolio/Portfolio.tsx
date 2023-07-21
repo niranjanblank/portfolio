@@ -2,6 +2,7 @@ import recommerder_system from '../../../public/recommender_system.png'
 import sentiment from '../../../public/sentiment.png'
 import plant_vision from '../../../public/plant_vision.png'
 import airbnb from '../../../public/airbnb.png'
+import la_crime from '../../../public/la_crime.png'
 import { PortfolioProp } from './interfaces'
 import PortfolioItem from './PortfolioItem'
 const Portfolio = () => {
@@ -55,7 +56,22 @@ const Portfolio = () => {
                 {tag: 'python', color:'text-orange-500'},
                 {tag: 'streamlit', color:'text-green-500'},
                 {tag: 'pytorch', color:'text-red-500'}
-                
+            ]
+        },
+        {
+            src: la_crime, 
+            alt:'la_crime', 
+            title:'LA Crime Data Analysis', 
+            link: 'https://github.com/niranjanblank/LACrimeDataAnalysis',
+            desc: 'This project conducts a thorough exploratory data analysis (EDA) on Los Angeles crime data, aiming to uncover insights and trends that \
+            can inform law enforcement policies, community support strategies,\
+             and crime prevention initiatives. This project uses R for data cleaning and preprocessing, postgreql for loading data and eda, and python for generating visualizations',
+            tags: [
+                {tag: 'python', color:'text-orange-500'},
+                {tag: 'sql', color: 'text-teal-500'},
+                {tag: 'r', color:'text-blue-500'},
+                {tag: 'eda', color:'text-green-500'},
+                {tag: 'pandas', color:'text-violet-500'}
             ]
         }
     ] 

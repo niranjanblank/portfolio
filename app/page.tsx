@@ -13,7 +13,7 @@ import { useState } from 'react'
 export default function Home() {
 
 
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(true)
 
   // theme changer function
   const onThemeChangeListener = () => {
