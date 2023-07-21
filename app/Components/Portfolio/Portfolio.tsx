@@ -3,6 +3,7 @@ import sentiment from '../../../public/sentiment.png'
 import plant_vision from '../../../public/plant_vision.png'
 import airbnb from '../../../public/airbnb.png'
 import la_crime from '../../../public/la_crime.png'
+import my_notes from '../../../public/my_notes.jpg'
 import { PortfolioProp } from './interfaces'
 import PortfolioItem from './PortfolioItem'
 const Portfolio = () => {
@@ -72,6 +73,21 @@ const Portfolio = () => {
                 {tag: 'r', color:'text-blue-500'},
                 {tag: 'eda', color:'text-green-500'},
                 {tag: 'pandas', color:'text-violet-500'}
+            ]
+        },
+        {
+            src: my_notes, 
+            alt:'my_notes', 
+            title:'MyNotes Web Application', 
+            link: 'https://github.com/niranjanblank/MyNotes',
+            desc: 'My Notes is a multi-user application designed for creating and storing notes. It provides an intuitive interface for users to organize their notes in a unified place. The application is built using React JS with MaterialUI for a beautiful user interface, NodeJS for the backend API, MongoDB for the database and JSON Web Tokens (JWT) for secure user authentication.',
+            tags: [
+                {tag: 'nodejs', color:'text-green-500'},
+                {tag: 'reactjs', color: 'text-sky-500'},
+                {tag: 'jwt', color:'text-orange-500'},
+                {tag: 'mongodb', color: 'text-green-500'},
+                {tag: 'materialui', color: 'text-sky-400'},
+                {tag: 'fullstackdevelopment', color: 'text-red-400'},
             ]
         }
     ] 

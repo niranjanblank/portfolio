@@ -14,10 +14,10 @@ const Intro = () => {
             <h2 className='text-5xl py-2 text-sky-500 font-medium md:text-6xl'>
             Niranjan Shah
             </h2>
-            <h3 className="text-2xl py-2 md:text-3xl">Data Scientist/ Machine Learning Engineer</h3>
+            <h3 className="text-2xl py-2 md:text-3xl">Data Scientist/ Machine Learning Engineer/ Web Developer</h3>
             <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-gray-400">
             AI enthusiast, currently studying at the University of Canberra. 
-            Skilled in all aspects of Data Science and ML. See my works below.</p>
+            Skilled in all aspects of Data Science and ML, with some experience in full stack development as well. See my works below.</p>
         </div>
         <div className="text-5xl flex justify-center gap-16 pb-10 text-gray-600 dark:text-gray-400">
             <a href="https://www.facebook.com/niranjanBlanK/" className="cursor-pointer"><AiFillFacebook/></a>

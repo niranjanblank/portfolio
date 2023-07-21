@@ -5,17 +5,21 @@ import fastapi from '../../../public/fastapi.png'
 import r from '../../../public/R.png'
 import scikit from '../../../public/scikit.png'
 import sql from '../../../public/sql.png'
+import powerbi from "../../../public/powerbi.png"
+import nodejs from '../../../public/nodejs.png'
 import { TechProp } from "./interfaces"
 import TechCard from "./TechCard"
 const Tech = () => {
 
     const tech_items:TechProp[] = [
-        {src: react, alt:'react', label:'React.Js'},
+        {src: react, alt:'react', label:'ReactJS'},
+        {src: nodejs, alt:'nodejs', label:'NodeJS'},
         {src: fastapi, alt:'fastapi', label:'FastAPI'},
         {src: pytorch, alt:'pytorch', label:'PyTorch'},
         {src: r, alt:'r', label:'R'},
         {src: sql, alt:'sql', label:'SQL'},
-        {src: scikit, alt:'scikit', label:'Scikit-learn'}
+        {src: scikit, alt:'scikit', label:'Scikit-learn'},
+        {src: powerbi, alt:'powerbi', label:'Power BI'}
     ] 
 
     return (
