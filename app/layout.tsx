@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import Providers from './providers'
 import Navbar from './Components/Navbar/Navbar'
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -10,17 +11,19 @@ export const metadata = {
   description: 'Showcasing the projects done by me',
 }
 
+
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body className={inter.className}>
         <Providers>
           <main className=" dark:bg-gray-900" style={{colorScheme:'dark'}}>
-          <Navbar />
+          <Navbar  />
           {children}
           </main>
         </Providers>

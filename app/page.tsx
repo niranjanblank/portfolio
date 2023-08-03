@@ -1,6 +1,5 @@
 import Footer from './Components/Footer/Footer'
 import Intro from './Components/Intro'
-
 import Portfolio from './Components/Portfolio/Portfolio'
 import Tech from './Components/Tech/Tech'
 import { ToastContainer } from 'react-toastify'
@@ -28,8 +27,8 @@ export default function Home() {
         pauseOnHover={false}
         theme="colored"
         />
-    <main className='flex flex-col bg-white px-10 md:px-20 lg:px-40  dark:bg-gray-900 pb-10 '  >
-        <section className="flex-grow flex items-center justify-center">
+    <main className='flex flex-col pt-20 bg-white px-10 md:px-20 lg:px-40  dark:bg-gray-900 pb-10 '  >
+        <section className="flex-grow flex items-center min-h-screen justify-center">
           <Intro/>
         </section>
 

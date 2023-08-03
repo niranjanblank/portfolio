@@ -12,7 +12,7 @@ const Navbar:React.FC<{
 
     return (
    
-        <nav className="py-10 flex justify-between items-center px-10 ">
+        <nav className="py-10 flex justify-between items-center px-10 min-w-full absolute ">
           <h1 className="text-xl font-burtons dark:text-white">Niranjan Shah</h1>
           <ul className='flex items-center'>
             <li className="dark:text-white">
