@@ -1,24 +1,22 @@
-import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs"
+'use client'
 import {saveAs} from 'file-saver'
+import ThemeSwitcherButton from './ThemeSwitcherButton'
+
+
 const Navbar:React.FC<{
-  onThemeChangeListener: () => void,
-  darkMode: boolean
 
-}> = ({onThemeChangeListener, darkMode}) =>{
-
+}> = ({}) =>{
     const cvDownloadHandler = () => {
       saveAs('/niranjanshah_cv.pdf','niranjanshah_cv.pdf')
     }
 
     return (
    
-        <nav className="py-10 mb-12 flex justify-between items-center">
+        <nav className="py-10 flex justify-between items-center px-10 ">
           <h1 className="text-xl font-burtons dark:text-white">Niranjan Shah</h1>
           <ul className='flex items-center'>
             <li className="dark:text-white">
-              {
-              (darkMode)? (<BsFillSunFill onClick={onThemeChangeListener} className='cursor-pointer text-xl'/>) :(<BsFillMoonStarsFill onClick={onThemeChangeListener} className='cursor-pointer text-xl'/>)
-              }
+              <ThemeSwitcherButton/>
               
               </li>
             <li>
