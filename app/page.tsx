@@ -1,27 +1,20 @@
-'use client'
 import Footer from './Components/Footer/Footer'
 import Intro from './Components/Intro'
-import Navbar from './Components/Navbar'
 import Portfolio from './Components/Portfolio/Portfolio'
 import Tech from './Components/Tech/Tech'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
-import { useState } from 'react'
+
 
 
 export default function Home() {
 
 
-  const [darkMode, setDarkMode] = useState(true)
-
-  // theme changer function
-  const onThemeChangeListener = () => {
-    setDarkMode(!darkMode)
-  }
+  
 
   return (
-    <div className={darkMode ? "dark": ""}>
+    <div>
       <ToastContainer
         position="top-right"
         autoClose={3000}
@@ -34,12 +27,9 @@ export default function Home() {
         pauseOnHover={false}
         theme="colored"
         />
-    <main className='bg-white px-10 md:px-20 lg:px-40  dark:bg-gray-900 pb-10' >
-        <section className="min-h-screen flex flex-col">
-          <Navbar onThemeChangeListener={onThemeChangeListener} darkMode={darkMode}/>
-          <div className="flex-grow flex items-center justify-center">
+    <main className='flex flex-col pt-20 bg-white px-10 md:px-20 lg:px-40  dark:bg-gray-900 pb-10 '  >
+        <section className="flex-grow flex items-center min-h-screen justify-center">
           <Intro/>
-          </div>
         </section>
 
         <section>

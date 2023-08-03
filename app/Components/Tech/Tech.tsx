@@ -23,14 +23,14 @@ const Tech = () => {
     ] 
 
     return (
-        <div className="flex flex-col items-center" >
+        <div className="flex flex-col items-center mb-20" >
             <h3 className="text-3xl py-1 mt-10 dark:text-white">Tech I Use</h3>
-            <div className="flex flex-wrap justify-center items-center">
+            <div className="flex flex-wrap justify-center items-center max-w-6xl gap-2 md:gap-10">
                 {tech_items.map(item => {
                     return (
-                        <div  key={item.label} className="m-2 w-auto sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                            <TechCard src={item.src} alt={item.alt} label={item.label} />
-                        </div>
+                     
+                            <TechCard src={item.src} alt={item.alt} label={item.label} key={item.label} />
+                        
                     );
                 })}
             </div>

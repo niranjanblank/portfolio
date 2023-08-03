@@ -1,3 +1,4 @@
+'use client'
 import { useForm, ValidationError } from "@formspree/react";
 import { useFormik } from "formik";
 import * as Yup from "yup"
