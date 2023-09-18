@@ -21,14 +21,17 @@ const PortfolioItem:React.FC<PortfolioProp> = (prop) => {
          >
             <BsGithub className="w-full" size={25}/>
         </Link>
-        <Image src={prop.src} alt={prop.alt} className='rounded-md w-full'/>
+        <Image src={prop.src} alt={prop.alt} 
+          width={1920}
+          height={1080}
+        className='rounded-md w-full'/>
         <div>
             <h1 className="text-3xl font-bold my-4 dark:text-white">{prop.title}</h1>
             <p className="text-black dark:text-gray-400">
             {prop.desc}
             </p>
             <div className="my-3 flex flex-wrap">
-                {prop.tags.map(tag=> {
+                {prop.tags?.map(tag=> {
                     return (
                         <span className={`${tag.color} mr-2`} 
                         key={`${prop.title}-${tag.tag}`}
