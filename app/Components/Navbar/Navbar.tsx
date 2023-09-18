@@ -1,9 +1,8 @@
 import CvDownloader from './CvDownloader'
 import ThemeSwitcherButton from './ThemeSwitcherButton'
 
-const Navbar:React.FC<{}> = ({}) =>{
+const Navbar:React.FC<{}> = async({}) =>{
    
-
     return (
    
         <nav className="py-10 flex justify-between items-center px-10 min-w-full absolute ">
