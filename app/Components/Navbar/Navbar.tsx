@@ -1,15 +1,8 @@
-'use client'
-import {saveAs} from 'file-saver'
+import CvDownloader from './CvDownloader'
 import ThemeSwitcherButton from './ThemeSwitcherButton'
 
-
-const Navbar:React.FC<{
-
-}> = ({}) =>{
-    const cvDownloadHandler = () => {
-      saveAs('/niranjanshah_cv.pdf','niranjanshah_cv.pdf')
-    }
-
+const Navbar:React.FC<{}> = async({}) =>{
+   
     return (
    
         <nav className="py-10 flex justify-between items-center px-10 min-w-full absolute ">
@@ -20,9 +13,7 @@ const Navbar:React.FC<{
               
               </li>
             <li>
-              <button 
-              onClick={cvDownloadHandler}
-              className="bg-gradient-to-r from-cyan-500 to-sky-400 text-white px-4 py-2 rounded-md ml-8">Resume</button>
+             <CvDownloader/>
               </li>
           </ul>
         </nav>
