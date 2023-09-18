@@ -3,6 +3,12 @@ const nextConfig = {
     images: {
         domains: ["images.ctfassets.net"]
     },
+    remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "images.ctfassets.net",
+        },
+      ],
     webpack: (config, { isServer }) => {
         if (!isServer) {
             // Fixes npm packages that depend on `aws-crt` module
