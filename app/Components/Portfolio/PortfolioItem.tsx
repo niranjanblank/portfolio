@@ -24,6 +24,7 @@ const PortfolioItem:React.FC<PortfolioProp> = (prop) => {
         <Image src={prop.src} alt={prop.alt} 
           width={1920}
           height={1080}
+          unoptimized={true}
         className='rounded-md w-full'/>
         <div>
             <h1 className="text-3xl font-bold my-4 dark:text-white">{prop.title}</h1>
