@@ -7,12 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-
+export const revalidate = 10
 export default function Home() {
-
-
-  
-
   return (
     <div>
       <ToastContainer
