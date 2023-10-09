@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@aws-sdk/client-ses": "^3.369.0",
+    "@contentful/rich-text-react-renderer": "^15.18.0",
     "@formspree/react": "^2.4.4",
     "@types/node": "20.3.3",
     "@types/react": "18.2.14",
