@@ -32,7 +32,17 @@ const options = {
             }
 
             return <p>{children}</p>;
-        }
+        },
+        [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
+            const { title, description, file } = node.data.target.fields;
+      
+            // Ensure the asset is an image
+            if (file.contentType.includes('image')) {
+              return <img src={file.url} alt={description || title} />;
+            }
+      
+            return null; // or a placeholder for non-image assets
+          },
     }
 }
 
@@ -41,6 +51,7 @@ export function RichText({content}:{content: Document}) {
     if(!content) {
         return null
     }
+
 
     return (
         <>

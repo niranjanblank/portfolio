@@ -1,6 +1,5 @@
 import { client } from "@/app/lib/contentful"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import { BLOCKS, Document, MARKS  } from '@contentful/rich-text-types';
+import { Document} from '@contentful/rich-text-types';
 import Image from "next/image"
 import { Asset, BlogPost } from "../interfaces";
 import { RichText } from "@/app/Components/RichText/RichText";
@@ -10,7 +9,7 @@ import { RichText } from "@/app/Components/RichText/RichText";
 async function getBlog(slug: string): Promise<BlogPost> {
   const response = await client.getEntries({
       content_type: 'blogPost',
-      'fields.slug': slug
+      'fields.slug': slug,
   });
 
   // Ensure there's at least one item in the response
@@ -35,28 +34,6 @@ async function getBlog(slug: string): Promise<BlogPost> {
 }
 
 
-
-   // Add render options for unordered and ordered lists
-// const options = {
-//     renderNode: {
-//       [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
-//         return (
-//           <img
-//             src={node.data.target.fields.file.url}
-//             alt={node.data.target.fields.title}
-//           />
-//         );
-//       },
-//       [BLOCKS.UL_LIST]: (node: any, children: any) => <ul className="mt-8" >{children}</ul>,
-//       [BLOCKS.LIST_ITEM]: (node: any, children: any) => <li >{children}</li>,
-//       [BLOCKS.QUOTE]: (node: any, children: any) => <blockquote className="dark:text-white" >{children}</blockquote>,
-//       [BLOCKS.PARAGRAPH]: (node: any, children: any) => <p className="mt-2 text-justify">{children}</p>,
-//       [MARKS.CODE]: (node: any, children: any) => <code>{children}</code>
-      
-//       // Add additional node types as needed
-//     },
-//   };
-
 export default async function BlogDetails(
     {params}:{
         params: {
@@ -66,8 +43,6 @@ export default async function BlogDetails(
 ){
     const blog = await getBlog(params.slug)
 
-
-
     return (
         <div className="flex flex-col w-full md:w-3/4 lg:w-2/4">
             <Image src={`https:${blog.thumbnail.url}`}
@@ -75,10 +50,10 @@ export default async function BlogDetails(
             height={blog.thumbnail.height}
             alt="image of blog"
             className="rounded-lg"
+            priority = {true}
             />
             <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl ">{blog.title}</h1>
             <div className="prose dark:text-white">
-                {/* {documentToReactComponents(blog.content, options)} */}
                 <RichText content={blog.content}/>
             </div>
             
