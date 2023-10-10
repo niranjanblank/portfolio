@@ -6,7 +6,7 @@ export default function BlogLayout({
     return (
       <section>
         {/* Include shared UI here e.g. a header or sidebar */}
-        <main className='flex flex-col pt-20 bg-white px-10 md:px-20 lg:px-40 xl:px-80 min-h-screen gap-10  dark:bg-gray-900 pb-10 ' >
+        <main className='flex flex-col pt-40 items-center bg-white px-5 sm:px-10  min-h-screen gap-10  dark:bg-gray-900 pb-10 ' >
         {children}
         </main>
       </section>

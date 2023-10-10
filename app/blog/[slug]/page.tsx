@@ -66,15 +66,15 @@ export default async function BlogDetails(
 
 
     return (
-        <div className="flex flex-col  items-center  ">
+        <div className="flex flex-col w-full md:w-3/4 lg:w-2/4">
             <Image src={`https:${blog.thumbnail.url}`}
             width={blog.thumbnail.width}
-            height={200}
+            height={blog.thumbnail.height}
             alt="image of blog"
-            className="rounded-lg w-full md:w-3/4 lg:w-2/4"
+            className="rounded-lg"
             />
-            <h1 className="font-bold text-2xl md:text-4xl lg:text-6xl ">{blog.title}</h1>
-            <div className="w-full md:w-3/4 lg:w-2/4">
+            <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl ">{blog.title}</h1>
+            <div className="">
                 {documentToReactComponents(blog.content, options)}
             </div>
             
