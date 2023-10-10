@@ -1,6 +1,6 @@
 import { client } from "@/app/lib/contentful"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import { BLOCKS, Document  } from '@contentful/rich-text-types';
+import { BLOCKS, Document, MARKS  } from '@contentful/rich-text-types';
 import Image from "next/image"
 import { Asset, BlogPost } from "../interfaces";
 
@@ -48,8 +48,10 @@ const options = {
       },
       [BLOCKS.UL_LIST]: (node: any, children: any) => <ul className="mt-8" >{children}</ul>,
       [BLOCKS.LIST_ITEM]: (node: any, children: any) => <li >{children}</li>,
-      [BLOCKS.QUOTE]: (node: any, children: any) => <blockquote >{children}</blockquote>,
-      [BLOCKS.PARAGRAPH]: (node: any, children: any) => <p className="mt-2 text-justify">{children}</p>
+      [BLOCKS.QUOTE]: (node: any, children: any) => <blockquote className="dark:text-white" >{children}</blockquote>,
+      [BLOCKS.PARAGRAPH]: (node: any, children: any) => <p className="mt-2 text-justify">{children}</p>,
+      [MARKS.CODE]: (node: any, children: any) => <code>{children}</code>
+      
       // Add additional node types as needed
     },
   };
@@ -74,7 +76,7 @@ export default async function BlogDetails(
             className="rounded-lg"
             />
             <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl ">{blog.title}</h1>
-            <div className="">
+            <div className="prose dark:text-white">
                 {documentToReactComponents(blog.content, options)}
             </div>
             

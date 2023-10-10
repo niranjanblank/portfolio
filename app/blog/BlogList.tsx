@@ -33,7 +33,6 @@ async function getBlogPosts(): Promise<BlogPost[]> {
 
 export async function BlogList() {
     const blogData = await getBlogPosts()
-    console.log(JSON.stringify(blogData[0].thumbnail,null, 4))
     return (
         <div className="mt-5">
              {
