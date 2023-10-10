@@ -3,6 +3,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS, Document, MARKS  } from '@contentful/rich-text-types';
 import Image from "next/image"
 import { Asset, BlogPost } from "../interfaces";
+import { RichText } from "@/app/Components/RichText/RichText";
 
 
 // get data based on slug
@@ -36,25 +37,25 @@ async function getBlog(slug: string): Promise<BlogPost> {
 
 
    // Add render options for unordered and ordered lists
-const options = {
-    renderNode: {
-      [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
-        return (
-          <img
-            src={node.data.target.fields.file.url}
-            alt={node.data.target.fields.title}
-          />
-        );
-      },
-      [BLOCKS.UL_LIST]: (node: any, children: any) => <ul className="mt-8" >{children}</ul>,
-      [BLOCKS.LIST_ITEM]: (node: any, children: any) => <li >{children}</li>,
-      [BLOCKS.QUOTE]: (node: any, children: any) => <blockquote className="dark:text-white" >{children}</blockquote>,
-      [BLOCKS.PARAGRAPH]: (node: any, children: any) => <p className="mt-2 text-justify">{children}</p>,
-      [MARKS.CODE]: (node: any, children: any) => <code>{children}</code>
+// const options = {
+//     renderNode: {
+//       [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
+//         return (
+//           <img
+//             src={node.data.target.fields.file.url}
+//             alt={node.data.target.fields.title}
+//           />
+//         );
+//       },
+//       [BLOCKS.UL_LIST]: (node: any, children: any) => <ul className="mt-8" >{children}</ul>,
+//       [BLOCKS.LIST_ITEM]: (node: any, children: any) => <li >{children}</li>,
+//       [BLOCKS.QUOTE]: (node: any, children: any) => <blockquote className="dark:text-white" >{children}</blockquote>,
+//       [BLOCKS.PARAGRAPH]: (node: any, children: any) => <p className="mt-2 text-justify">{children}</p>,
+//       [MARKS.CODE]: (node: any, children: any) => <code>{children}</code>
       
-      // Add additional node types as needed
-    },
-  };
+//       // Add additional node types as needed
+//     },
+//   };
 
 export default async function BlogDetails(
     {params}:{
@@ -77,7 +78,8 @@ export default async function BlogDetails(
             />
             <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl ">{blog.title}</h1>
             <div className="prose dark:text-white">
-                {documentToReactComponents(blog.content, options)}
+                {/* {documentToReactComponents(blog.content, options)} */}
+                <RichText content={blog.content}/>
             </div>
             
         </div>
