@@ -8,6 +8,8 @@ export  function BlogListSkeleton() {
                     <BlogCardSkeleton />
                     <BlogCardSkeleton />
                     <BlogCardSkeleton />
+                    <BlogCardSkeleton />
+                    <BlogCardSkeleton />
             </div>
     )
 }
