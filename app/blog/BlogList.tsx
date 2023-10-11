@@ -36,14 +36,13 @@ async function getBlogPosts(): Promise<BlogPost[]> {
 export async function BlogList() {
     const blogData = await getBlogPosts()
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-             {
-            blogData.map(blog => (
-                <BlogCard blog={blog} key={blog.slug} />
-            ))
-            
-            }
-        </div>
-
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                {
+                blogData.map(blog => (
+                    <BlogCard blog={blog} key={blog.slug} />
+                ))
+                
+                }
+            </div>
     )
 }

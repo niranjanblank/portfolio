@@ -25,7 +25,7 @@ export default function BlogCard({blog}: BlogProp) {
             />
         </div>
             <div className="px-5 py-5">
-                <h2 className="text-3xl font-bold">
+                <h2 className="text-3xl font-bold mb-1">
                 {blog.title}
                     {/* <Link 
                         className="transition text-gray duration-100 hover:bg-gradient-to-r hover: from-purple-500 hover:to-blue-500 hover:text-transparent hover: bg-clip-text "
