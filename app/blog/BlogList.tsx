@@ -7,7 +7,8 @@ import { format, parseISO } from 'date-fns';
 
 async function getBlogPosts(): Promise<BlogPost[]> {
     const response = await client.getEntries({
-        content_type: 'blogPost'
+        content_type: 'blogPost',
+        order: ["-fields.datePosted"]
     })
 
     const blogposts: BlogPost[] = response.items.map(item => {

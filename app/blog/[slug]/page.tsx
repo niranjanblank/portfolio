@@ -46,14 +46,16 @@ export default async function BlogDetails(
 
     return (
         <div className="flex flex-col w-full md:w-3/4 lg:w-2/4">
+            <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl pt-5 pb-5 ">{blog.title}</h1>
+            {/* <p className="dark:text-gray-300 text-sm text-left">{blog.date}</p> */}
             <Image src={`https:${blog.thumbnail.url}`}
             width={blog.thumbnail.width}
             height={blog.thumbnail.height}
             alt="image of blog"
-            className="rounded-lg"
+            className="rounded-lg pb-5"
             priority = {true}
             />
-            <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl ">{blog.title}</h1>
+            
             <div className="prose dark:text-white">
                 <RichText content={blog.content}/>
             </div>
