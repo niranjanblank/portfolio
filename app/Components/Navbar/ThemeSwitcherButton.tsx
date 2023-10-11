@@ -17,18 +17,14 @@ export default function ThemeSwitcherButton(){
 
     }, [])
   
-    // if (!mounted) {
-    //   return null
-    // }
+    if (!mounted) {
+      return null
+    }
     return (
-      <>
-         {mounted ? (
-            resolvedTheme === 'dark' ? 
-            <BsFillSunFill onClick={onThemeChangeListener} className='cursor-pointer text-xl'/> :
-            <BsFillMoonStarsFill onClick={onThemeChangeListener} className='cursor-pointer text-xl'/>
-         ) : (
-          <BsFillSunFill onClick={onThemeChangeListener} className='cursor-pointer text-xl'/>
-         )}
-      </>
-   );
+        <>
+        {
+              (resolvedTheme=='dark')? (<BsFillSunFill onClick={onThemeChangeListener} className='cursor-pointer text-xl'/>) :(<BsFillMoonStarsFill onClick={onThemeChangeListener} className='cursor-pointer text-xl'/>)
+              }
+        </>
+    )
 }
