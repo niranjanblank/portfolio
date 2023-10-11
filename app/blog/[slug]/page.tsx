@@ -3,7 +3,7 @@ import { Document} from '@contentful/rich-text-types';
 import Image from "next/image"
 import { Asset, BlogPost } from "../interfaces";
 import { RichText } from "@/app/Components/RichText/RichText";
-
+import { format, parseISO } from 'date-fns';
 
 // get data based on slug
 async function getBlog(slug: string): Promise<BlogPost> {
@@ -29,6 +29,7 @@ async function getBlog(slug: string): Promise<BlogPost> {
           height: thumbnail.fields.file.details.image.height
       },
       excerpt: item.fields.excerpt as string,
+      date: format(parseISO(item.fields.datePosted as string), 'MMM dd, yyyy') as string,
       content: item.fields.content as Document  // Assuming Document is imported from '@contentful/rich-text-types'
   };
 }

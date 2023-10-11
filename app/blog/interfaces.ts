@@ -8,8 +8,9 @@ export interface BlogPost {
       width: number
       height: number
     }
-    excerpt: string;
-    content: Document;
+    excerpt: string
+    date: string
+    content: Document
 }
 
 export type Asset = {
