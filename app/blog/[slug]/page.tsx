@@ -30,7 +30,8 @@ async function getBlog(slug: string): Promise<BlogPost> {
       },
       excerpt: item.fields.excerpt as string,
       date: format(parseISO(item.fields.datePosted as string), 'MMM dd, yyyy') as string,
-      content: item.fields.content as Document  // Assuming Document is imported from '@contentful/rich-text-types'
+      content: item.fields.content as Document,  // Assuming Document is imported from '@contentful/rich-text-types',
+      tags: item.fields.tag as string[] | null
   };
 }
 

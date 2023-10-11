@@ -1,4 +1,6 @@
+import { Suspense } from "react";
 import { BlogList } from "./BlogList";
+import { BlogListSkeleton } from "../Components/Blog/BlogListSkeleton";
 
 export const revalidate = 10
 export default function Blog() {
@@ -10,7 +12,10 @@ export default function Blog() {
                     Delve into the depth of data, the art of analysis, and the stories that spring from bytes and beliefs. Happy reading!
                 </p>
             </div>
-            <BlogList/>
+            <Suspense fallback={<BlogListSkeleton/>}>
+                <BlogList/>
+            </Suspense>
+            
         </div>
     )
 }
