@@ -27,7 +27,7 @@ export default function ThemeSwitcherButton(){
             <BsFillSunFill onClick={onThemeChangeListener} className='cursor-pointer text-xl'/> :
             <BsFillMoonStarsFill onClick={onThemeChangeListener} className='cursor-pointer text-xl'/>
          ) : (
-          null
+          <BsFillSunFill onClick={onThemeChangeListener} className='cursor-pointer text-xl'/>
          )}
       </>
    );
