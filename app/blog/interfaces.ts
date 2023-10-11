@@ -11,6 +11,7 @@ export interface BlogPost {
     excerpt: string
     date: string
     content: Document
+    tags: string[] | null
 }
 
 export type Asset = {

@@ -24,7 +24,8 @@ async function getBlogPosts(): Promise<BlogPost[]> {
             },
             excerpt: item.fields.excerpt as string,
             date: format(parseISO(item.fields.datePosted as string), 'MMM dd, yyyy') as string,
-            content: item.fields.content as Document
+            content: item.fields.content as Document,
+            tags: item.fields.tags as string[] | null
         }
 
     })

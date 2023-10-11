@@ -27,13 +27,18 @@ export default function BlogCard({blog}: BlogProp) {
             <div className="px-5 py-5">
                 <h2 className="text-3xl font-bold mb-1">
                 {blog.title}
-                    {/* <Link 
-                        className="transition text-gray duration-100 hover:bg-gradient-to-r hover: from-purple-500 hover:to-blue-500 hover:text-transparent hover: bg-clip-text "
-                        href={`/blog/${blog.slug}`}> {blog.title}</Link> */}
                 </h2>
                     
                 <p className="text-justify dark:text-gray-300">{blog.excerpt}</p>
-                <p className="text-sm dark:text-gray-300 mt-2">{blog.date}</p>
+                <div className="flex flex-wrap gap-2 py-2">
+                    {blog.tags && (
+                        blog.tags.map((tag: string) => (
+                        <span className="bg-gray-500 px-2 text-sm text-white rounded-md" key={`${blog.slugtag}-${tag}`}>{tag}</span>
+                        )
+                        )
+                    )}           
+                </div>
+                <p className="text-sm dark:text-gray-300">{blog.date}</p>
             </div>
     
        </Link>
