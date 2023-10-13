@@ -60,7 +60,7 @@ export default async function BlogDetails(
             priority = {true}
             />
             
-            <div className="prose dark:text-white">
+            <div className="prose dark:text-white text-justify">
                 <RichText content={blog.content}/>
             </div>
             {blog.githubLink && <GithubCard link={blog.githubLink as string}/>}

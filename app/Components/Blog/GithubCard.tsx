@@ -10,8 +10,8 @@ export default function GithubCard({link}:{link: string}) {
         >
         <h1>Please visit the github repo for entire code. Thank You</h1>
         <h2 className="text-xl font-semibold flex items-center gap-2"><AiFillGithub/>niranjanblank</h2>
-
-        {link}
+        <p className="break-all">{link}</p>
+        
         </Link>
     )
 }
