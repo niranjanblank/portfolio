@@ -11,7 +11,8 @@ export interface BlogPost {
     excerpt: string
     date: string
     content: Document
-    tags: string[] | null
+    tags: string[] | null,
+    githubLink: string | null
 }
 
 export type Asset = {

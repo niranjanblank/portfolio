@@ -4,6 +4,8 @@ import Image from "next/image"
 import { Asset, BlogPost } from "../interfaces";
 import { RichText } from "@/app/Components/RichText/RichText";
 import { format, parseISO } from 'date-fns';
+import Link from "next/link";
+import GithubCard from "@/app/Components/Blog/GithubCard";
 
 // get data based on slug
 async function getBlog(slug: string): Promise<BlogPost> {
@@ -31,7 +33,8 @@ async function getBlog(slug: string): Promise<BlogPost> {
       excerpt: item.fields.excerpt as string,
       date: format(parseISO(item.fields.datePosted as string), 'MMM dd, yyyy') as string,
       content: item.fields.content as Document,  // Assuming Document is imported from '@contentful/rich-text-types',
-      tags: item.fields.tag as string[] | null
+      tags: item.fields.tag as string[] | null,
+      githubLink: item.fields.githubLink as string | null
   };
 }
 
@@ -60,7 +63,7 @@ export default async function BlogDetails(
             <div className="prose dark:text-white">
                 <RichText content={blog.content}/>
             </div>
-            
+            {blog.githubLink && <GithubCard link={blog.githubLink as string}/>}
         </div>
     )
 }

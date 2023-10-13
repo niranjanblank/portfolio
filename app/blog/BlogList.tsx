@@ -25,7 +25,8 @@ async function getBlogPosts(): Promise<BlogPost[]> {
             excerpt: item.fields.excerpt as string,
             date: format(parseISO(item.fields.datePosted as string), 'MMM dd, yyyy') as string,
             content: item.fields.content as Document,
-            tags: item.fields.tags as string[] | null
+            tags: item.fields.tags as string[] | null,
+            githubLink: item.fields.githubLink as string | null
         }
 
     })
@@ -42,7 +43,6 @@ export async function BlogList() {
                 blogData.map(blog => (
                     <BlogCard blog={blog} key={blog.slug} />
                 ))
-                
                 }
             </div>
     )

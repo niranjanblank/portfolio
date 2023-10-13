@@ -9,7 +9,7 @@ const options = {
         [MARKS.CODE] : (text: any) => {
             return (
                 <pre>
-                    <code>{text}</code>
+                    <code className="text-lg">{text}</code>
                 </pre>
             )
         }
@@ -23,9 +23,9 @@ const options = {
 
             if (contentWithCodeMark) {
                 return (
-                    <div>
+                    <div >
                         <pre>
-                            <code>{children}</code>
+                            <code className="text-lg">{children}</code>
                         </pre>
                     </div>
                 );
@@ -43,6 +43,12 @@ const options = {
       
             return null; // or a placeholder for non-image assets
           },
+        [BLOCKS.HEADING_1]: (node: Node, children: React.ReactNode) => <h1 className="dark:text-white">{children}</h1>,
+        [BLOCKS.HEADING_2]: (node: Node, children: React.ReactNode) => <h2 className="dark:text-white">{children}</h2>,
+        [BLOCKS.HEADING_3]: (node: Node, children: React.ReactNode) => <h3 className="dark:text-white">{children}</h3>,
+        [BLOCKS.HEADING_4]: (node: Node, children: React.ReactNode) => <h4 className="dark:text-white">{children}</h4>,
+        [BLOCKS.HEADING_5]: (node: Node, children: React.ReactNode) => <h5 className="dark:text-white">{children}</h5>,
+        [BLOCKS.HEADING_6]: (node: Node, children: React.ReactNode) => <h6 className="dark:text-white">{children}</h6>
     }
 }
 
