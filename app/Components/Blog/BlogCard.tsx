@@ -7,7 +7,7 @@ interface BlogProp {
 
 export default function BlogCard({blog}: BlogProp) {
     return (
-        <Link href={`/blog/${blog.slug}`} className="flex flex-col m-2 dark:bg-gray-800  rounded-lg shadow-lg
+        <Link href={`/blog/${blog.slug}`} className="flex flex-col my-2 dark:bg-gray-800  rounded-lg shadow-lg
         transition ease-in-out hover:-translate-y-1  hover:scale-105
         ">
      

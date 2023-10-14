@@ -1,17 +1,25 @@
-
+import Link from "next/link";
 import BlogCard from "../Components/Blog/BlogCard";
 import { client } from "../lib/contentful";
-import { Asset, BlogPost } from "./interfaces";
+import { Asset, BlogPost, BlogPostList } from "./interfaces";
 import { Document } from '@contentful/rich-text-types';
 import { format, parseISO } from 'date-fns';
+import Trigger from "./Trigger";
 
-async function getBlogPosts(): Promise<BlogPost[]> {
+
+
+
+async function getBlogPosts(page:number = 1, limit: number = 10): Promise<BlogPostList> {
     const response = await client.getEntries({
         content_type: 'blogPost',
-        order: ["-fields.datePosted"]
+        order: ["-fields.datePosted"],
+        skip: (page-1)*limit,
+        limit: limit
     })
 
-    const blogposts: BlogPost[] = response.items.map(item => {
+
+    const blogposts: BlogPostList = {total: response.total,
+        blogs: response.items.map(item => {
         const thumbnail = item.fields.thumbnail as Asset;
 
         return {
@@ -29,21 +37,41 @@ async function getBlogPosts(): Promise<BlogPost[]> {
             githubLink: item.fields.githubLink as string | null
         }
 
-    })
+    })}
 
     return blogposts
 }
 
 
-export async function BlogList() {
-    const blogData = await getBlogPosts()
+export async function BlogList({page, limit}: {page:number, limit: number})
+ {
+
+
+    const blogData = await getBlogPosts(page, limit)
     return (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="flex flex-col">
+        <div className="flex gap-2">
+        {(page*limit)<blogData.total && (
+            <Link href={`/blog?page=${page+1}&limit=${limit}`} className="dark:bg-white text-black px-2 rounded-sm" >
+            Next
+        </Link>
+        )}
+        {page!==1 && (
+        <Link href={`/blog?page=${page>1?page-1:page}&limit=${limit}`}  className="dark:bg-white text-black px-2 rounded-sm" >
+        Previous
+        </Link>
+        )}
+        </div>
+      
+            <div className="grid gap-3  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {
-                blogData.map(blog => (
+                blogData.blogs.map(blog => (
                     <BlogCard blog={blog} key={blog.slug} />
                 ))
                 }
+
             </div>
+            {/* <Trigger limit={limit}></Trigger> */}
+        </div>
     )
 }

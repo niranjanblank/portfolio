@@ -15,6 +15,11 @@ export interface BlogPost {
     githubLink: string | null
 }
 
+export interface BlogPostList {
+    blogs: BlogPost[],
+    total: number
+}
+
 export type Asset = {
     metadata: {
         tags: any[];
