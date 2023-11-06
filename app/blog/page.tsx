@@ -12,7 +12,7 @@ export default function Blog({
 
     //  getting the query parameters which will be used for pagination
     const page = typeof searchParams.page === 'string' ? Number(searchParams.page): 1
-    const limit = typeof searchParams.limit === 'string' ? Number(searchParams.limit) : 8
+    const limit = typeof searchParams.limit === 'string' ? Number(searchParams.limit) : 6
 
     return (
         <div className="flex justify-center flex-col container">
