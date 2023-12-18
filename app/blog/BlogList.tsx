@@ -52,12 +52,12 @@ export async function BlogList({page, limit}: {page:number, limit: number})
         <div className="flex flex-col">
         <div className="flex gap-2">
         {(page*limit)<blogData.total && (
-            <Link href={`/blog?page=${page+1}&limit=${limit}`} className="dark:bg-white text-black px-2 rounded-sm" >
+            <Link href={`/blog?page=${page+1}&limit=${limit}`} className="border dark:bg-gray-800 dark:text-white p-2 px-4 rounded-md" >
             Next
         </Link>
         )}
         {page!==1 && (
-        <Link href={`/blog?page=${page>1?page-1:page}&limit=${limit}`}  className="dark:bg-white text-black px-2 rounded-sm" >
+        <Link href={`/blog?page=${page>1?page-1:page}&limit=${limit}`}  className="border dark:bg-gray-800 dark:text-white p-2 px-4 rounded-md" >
         Previous
         </Link>
         )}
