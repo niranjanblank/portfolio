@@ -9,11 +9,7 @@ import { cvDownloadHandler } from "@/app/lib/utils"
 
 import {useTheme} from 'next-themes'
 
-
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-    'pdfjs-dist/build/pdf.worker.min.mjs',
-    import.meta.url,
-  ).toString();
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
 const PdfRender:React.FC = () => {
   const [numPages, setNumPages] = useState<number>();
