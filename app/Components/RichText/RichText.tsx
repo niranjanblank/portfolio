@@ -1,16 +1,15 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS, Document, MARKS, Node, INLINES, Mark } from "@contentful/rich-text-types";
-
-
-
+import CodeBlock from "./CodeBlock";
 
 const options = {
     renderMark: {
         [MARKS.CODE] : (text: any) => {
             return (
-                <pre>
-                    <code className="text-lg">{text}</code>
-                </pre>
+                // <pre>
+                //     <code className="text-lg">{text}</code>
+                // </pre>
+                <CodeBlock code={text}/>
             )
         }
     },
@@ -22,10 +21,8 @@ const options = {
         );
             if (contentWithCodeMark) {
                 return (
-                    <div >
-                        <pre>
-                            <code className="text-lg">{children}</code>
-                        </pre>
+                    <div className="w-full">
+                           <CodeBlock code={children}/>
                     </div>
                 );
             }
