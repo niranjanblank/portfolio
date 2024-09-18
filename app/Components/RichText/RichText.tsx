@@ -19,13 +19,20 @@ const options = {
             const contentWithCodeMark = (node as any).content?.find((item: any) => 
             item.marks && Array.isArray(item.marks) && (item.marks as Mark[]).find(mark => mark.type === MARKS.CODE)
         );
-            if (contentWithCodeMark) {
-                return (
-                    <div className="w-full">
-                           <CodeBlock code={children}/>
-                    </div>
-                );
+        if (contentWithCodeMark && Array.isArray(children)) {
+            // Extract the code from the React element's props
+            const codeElement = children.find(
+                (child: any) => child?.props?.code
+            );
+    
+            if (codeElement) {
+                // Access the `code` prop from the found React element
+                const code = codeElement.props.code;
+    
+                // Ensure the code is passed as a string to CodeBlock
+                return <CodeBlock code={code} />;
             }
+        }
 
             return <p>{children}</p>;
         },
