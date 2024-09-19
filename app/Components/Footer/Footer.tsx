@@ -11,7 +11,7 @@ const Footer = () => {
                 
                 <h1 className=" font-bold text-4xl  md:text-6xl">Niranjan Shah</h1>
                 
-                <p className="flex items-center gap-2 text-lg md:text-2xl "><FiMail/> niranjashah474@gmail.com</p>
+                <p className="flex items-center gap-2 text-lg md:text-2xl "><FiMail/> niranjanshah474@gmail.com</p>
                 <p className="flex items-center gap-2 text-lg md:text-2xl "><FaMapMarkerAlt/> Canberra, ACT, Australia</p>
                 <p className="flex items-center gap-2 text-lg md:text-2xl "><FaPhoneAlt/> (+61)432518736</p>
                 

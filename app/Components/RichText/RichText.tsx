@@ -1,16 +1,15 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS, Document, MARKS, Node, INLINES, Mark } from "@contentful/rich-text-types";
-
-
-
+import CodeBlock from "./CodeBlock";
 
 const options = {
     renderMark: {
         [MARKS.CODE] : (text: any) => {
             return (
-                <pre>
-                    <code className="text-lg">{text}</code>
-                </pre>
+                // <pre>
+                //     <code className="text-lg">{text}</code>
+                // </pre>
+                <CodeBlock code={text}/>
             )
         }
     },
@@ -20,15 +19,20 @@ const options = {
             const contentWithCodeMark = (node as any).content?.find((item: any) => 
             item.marks && Array.isArray(item.marks) && (item.marks as Mark[]).find(mark => mark.type === MARKS.CODE)
         );
-            if (contentWithCodeMark) {
-                return (
-                    <div >
-                        <pre>
-                            <code className="text-lg">{children}</code>
-                        </pre>
-                    </div>
-                );
+        if (contentWithCodeMark && Array.isArray(children)) {
+            // Extract the code from the React element's props
+            const codeElement = children.find(
+                (child: any) => child?.props?.code
+            );
+    
+            if (codeElement) {
+                // Access the `code` prop from the found React element
+                const code = codeElement.props.code;
+    
+                // Ensure the code is passed as a string to CodeBlock
+                return <CodeBlock code={code} />;
             }
+        }
 
             return <p>{children}</p>;
         },
