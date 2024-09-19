@@ -40,7 +40,11 @@ const Intro = async () => {
         <div>
             <div className="mx-auto mt-2 rounded-full w-64 h-64 md:h-96 md:w-96 "  >
             {/* <Image src={centralImage} alt="" /> */}
-            <Image src={profile_image} alt="profile image" 
+            <Image src={intro_data.profile_image} alt="profile image" 
+            width={96}
+            height={96}
+              unoptimized={true}
+              priority={true}
             className='rounded-full w-64 h-64 md:h-96 md:w-96 object-cover object-top border-2'/>
         </div>
         <div className="text-center p-10  dark:text-white "> 
