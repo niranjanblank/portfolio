@@ -1,7 +1,5 @@
-import { StaticImageData } from "next/image";
-
 export interface TechProp {
-    src: StaticImageData,
+    src: string,
     alt: string,
     label: string
 }

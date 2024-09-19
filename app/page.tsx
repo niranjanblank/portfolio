@@ -1,5 +1,5 @@
 import Footer from './Components/Footer/Footer'
-import Intro from './Components/Intro'
+import Intro from './Components/Intro/Intro'
 import Portfolio from './Components/Portfolio/Portfolio'
 import Tech from './Components/Tech/Tech'
 import { ToastContainer } from 'react-toastify'
