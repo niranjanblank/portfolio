@@ -5,11 +5,17 @@ import {
     } from 'react-icons/ai'
 
 import Image from "next/image"
-import centralImage from "../../public/central_image.png"
+// import centralImage from "../../public/central_image.png"
+import profile_image from "../../public/profile_image.jpg"
 
 const Intro = () => {
     return (
         <div>
+            <div className="mx-auto mt-2 rounded-full w-64 h-64 md:h-96 md:w-96 "  >
+            {/* <Image src={centralImage} alt="" /> */}
+            <Image src={profile_image} alt="profile image" 
+            className='rounded-full w-64 h-64 md:h-96 md:w-96 object-cover object-top border-2'/>
+        </div>
         <div className="text-center p-10  dark:text-white "> 
             <h2 className='text-5xl py-2 text-sky-500 font-medium md:text-6xl'>
             Niranjan Shah
@@ -24,9 +30,7 @@ const Intro = () => {
             <a href="https://www.linkedin.com/in/niranjan-shah-7037921a4/" className="cursor-pointer"><AiFillLinkedin/></a>
             <a href="https://github.com/niranjanblank" className="cursor-pointer"><AiFillGithub/></a>
         </div>
-        <div className=" mx-auto rounded-full w-80 h-80 md:h-96 md:w-96"  >
-            <Image src={centralImage} alt="" />
-        </div>
+ 
     </div>
     )
 }
