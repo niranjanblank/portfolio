@@ -20,6 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+ 
       <body className={inter.className}>
         <Providers>
           <main className=" dark:bg-gray-900" style={{colorScheme:'dark'}}>
