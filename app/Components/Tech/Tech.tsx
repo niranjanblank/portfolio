@@ -17,13 +17,14 @@ async function getTechItems(): Promise<TechProp[]> {
         content_type: 'tech'
     })
 
-    const techItems: TechProp[] = response.items.map(item => {
+    const techItems: TechProp[] = response.items.map((item,index) => {
         const srcField = item.fields.src as { fields: { file: { url: string } } };
   
         return {
             label: item.fields.label as string,
             alt: item.fields.alt as string,
             src: `https://${srcField.fields.file.url}`,
+            index: index
         }
     })
 
