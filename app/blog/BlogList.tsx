@@ -5,8 +5,8 @@ import { Asset, BlogPost, BlogPostList } from "./interfaces";
 import { Document } from '@contentful/rich-text-types';
 import { format, parseISO } from 'date-fns';
 import Trigger from "./Trigger";
-
-
+import { MdNavigateNext } from "react-icons/md";
+import { MdNavigateBefore } from "react-icons/md";
 
 
 async function getBlogPosts(page:number = 1, limit: number = 10): Promise<BlogPostList> {
@@ -52,13 +52,13 @@ export async function BlogList({page, limit}: {page:number, limit: number})
         <div className="flex flex-col">
         <div className="flex gap-2">
         {(page*limit)<blogData.total && (
-            <Link href={`/blog?page=${page+1}&limit=${limit}`} className="border dark:bg-gray-800 dark:text-white p-2 px-4 rounded-md" >
-            Next
+            <Link href={`/blog?page=${page+1}&limit=${limit}`} className="flex items-center hover:bg-gray-200 dark:bg-gray-800 dark:text-white p-2 px-4 rounded-md" >
+            Next <MdNavigateNext className="text-2xl"/>
         </Link>
         )}
         {page!==1 && (
-        <Link href={`/blog?page=${page>1?page-1:page}&limit=${limit}`}  className="border dark:bg-gray-800 dark:text-white p-2 px-4 rounded-md" >
-        Previous
+        <Link href={`/blog?page=${page>1?page-1:page}&limit=${limit}`} className="flex items-center justify-center hover:bg-gray-200 dark:bg-gray-800 dark:text-white p-2 px-4 rounded-md" >
+        <MdNavigateBefore className="text-2xl"/>Previous
         </Link>
         )}
         </div>

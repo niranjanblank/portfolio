@@ -38,9 +38,12 @@ const  Tech = async () => {
 
 
     return (
-        <div className="flex flex-col items-center mb-20" >
-            <h3 className="text-3xl py-1 mt-10 dark:text-white">Tech I Use</h3>
-            <div className="flex flex-wrap justify-center items-center max-w-6xl gap-2 md:gap-10">
+        <div className="flex flex-col items-left mb-20" >
+            <div>
+            <h2 className="text-lg py-1 mt-10 text-left text-gray-600 dark:text-gray-300">My Skills</h2>
+            <h3 className="text-6xl py-1 font-bold text-left dark:text-white">Technologies.</h3>
+            </div>
+            <div className="flex flex-wrap justify-center items-left w-full gap-2 md:gap-10">
                 {tech_data.map((item,index) => {
                     return (
                      

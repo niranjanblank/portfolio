@@ -14,8 +14,17 @@ const Navbar:React.FC<{}> = async({}) =>{
               
               </li>
               <li >
-                <Link href="/blog" className="dark:text-gray-400">Blog</Link>
-              </li>
+              <Link 
+                href="/blog" 
+                className="relative dark:text-gray-400 text-black 
+                          after:block after:h-[2px] after:w-0 
+                          after:bg-black dark:after:bg-gray-400 
+                          after:transition-all after:duration-300 after:ease-in-out 
+                          hover:after:w-full"
+              >
+                Blog
+              </Link>
+               </li>
             <li>
              <CvDownloader/>
               </li>

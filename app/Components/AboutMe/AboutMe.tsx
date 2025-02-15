@@ -25,8 +25,8 @@ return {
 export default async function AboutMe(){
 
     return (
-        <div className="text-center ">
-        <h3 className="text-3xl py-1 dark:text-white ">Things about me</h3>
+        <div className="text-left">
+        <h3 className="text-6xl py-1 font-bold dark:text-white ">About Me.</h3>
         <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-400 md:text-xl">
     Passionate about building innovative solutions, I have expertise in  
     <span className="text-sky-500"> Software engineering</span>, 
