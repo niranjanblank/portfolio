@@ -40,10 +40,10 @@ const  Tech = async () => {
         <div className="flex flex-col items-center mb-20" >
             <h3 className="text-3xl py-1 mt-10 dark:text-white">Tech I Use</h3>
             <div className="flex flex-wrap justify-center items-center max-w-6xl gap-2 md:gap-10">
-                {tech_data.map(item => {
+                {tech_data.map((item,index) => {
                     return (
                      
-                            <TechCard src={item.src} alt={item.alt} label={item.label} key={item.label} />
+                            <TechCard src={item.src} alt={item.alt} label={item.label} index={index} key={item.label} />
                         
                     );
                 })}
