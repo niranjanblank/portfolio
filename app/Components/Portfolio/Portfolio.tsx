@@ -8,12 +8,13 @@ async function getPortfolioItems(): Promise<PortfolioProp[]> {
         content_type: 'portfolioProject'
     })
 
-    const portfolioItems: PortfolioProp[] = response.items.map(item => {
+    const portfolioItems: PortfolioProp[] = response.items.map((item,index) => {
         const srcField = item.fields.src as { fields: { file: { url: string } } };
   
         return {
             title: item.fields.title as string,
             alt: item.fields.alt as string,
+            index: index,
             src: `https://${srcField.fields.file.url}`,
             link: item.fields.link as string,
             desc: item.fields.desc as string,
@@ -46,6 +47,7 @@ const Portfolio = async () => {
                     src={item.src} 
                     alt={item.alt} 
                     title={item.title} 
+                    index={item.index}
                     link={item.link}
                     desc={item.desc}
                     tags={item.tags}
