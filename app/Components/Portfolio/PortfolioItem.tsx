@@ -31,7 +31,7 @@ const PortfolioItem:React.FC<PortfolioProp> = (prop) => {
     whileHover={{ scale: 1.05 }} // No delay on hover
     variants={cardVariants} // Use variants
     className='shadow-lg rounded-lg p-4 relative
-     dark:bg-gray-800'>
+     dark:bg-zinc-800'>
         {/* link for github repo */}
          <Link className="absolute text-white right-6 top-6 w-10 h-10 bg-gray-500 rounded-full flex justify-center items-center cursor-pointer
          bg-gradient-to-r from-indigo-500 to-indigo-900

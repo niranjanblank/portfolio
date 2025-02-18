@@ -15,7 +15,7 @@ const Footer = () => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.3, ease: "easeIn"}}
         
-        className="grid md:grid-cols-2 grid-cols-1 bg-white dark:text-white dark:bg-gray-900 p-10 ">
+        className="grid md:grid-cols-2 grid-cols-1 bg-white dark:text-white dark:bg-zinc-900 p-10 ">
             <div className="w-full  flex flex-col  md:items-end  py-3 md:px-3 md:gap-10 mb-10">
                 
                 <h1 className=" font-bold text-4xl  md:text-6xl">Niranjan Shah</h1>

@@ -40,7 +40,7 @@ const Intro = async () => {
         <div className='flex flex-col-reverse justify-center items-center md:flex-row'>
             <div className='flex flex-col items-center justify-start'>
                 <div className="text-center p-10  dark:text-white "> 
-                    <h2 className='text-5xl py-2 text-sky-500 font-bold md:text-6xl'>
+                    <h2 className='text-5xl py-2 text-sky-500 font-bold md:text-6xl lg:text-7xl '>
                     NIRANJAN SHAH
                     </h2>
                     <h3 className="text-2xl py-2 md:text-3xl">{intro_data.title}</h3>
@@ -55,14 +55,14 @@ const Intro = async () => {
                 </div>
             </div>
 
-            <div className="mx-auto mt-2 rounded-full w-64 h-64 md:h-96 md:w-80 "  >
+            <div className="mx-auto mt-2 rounded-full w-64 h-64 md:h-96 md:w-80 lg:w-96 lg:h-[500px] bg-red-500" >
                 {/* <Image src={centralImage} alt="" /> */}
                 <Image src={intro_data.profile_image} alt="profile image" 
                 width={96}
                 height={96}
                 unoptimized={true}
                 priority={true}
-                className='rounded-full w-64 h-64 md:h-96 md:w-80 object-cover object-top border-2'/>
+                className='rounded-full w-64 h-64 md:h-96 md:w-80 lg:w-96 lg:h-[500px] object-cover object-top '/>
             </div>
      
     </div>
