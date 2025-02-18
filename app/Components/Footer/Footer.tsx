@@ -10,7 +10,7 @@ import {motion} from "framer-motion"
 const Footer = () => {
     return (
         <motion.div 
-        initial={{ opacity: 0, y:100 }}
+        initial={{ opacity: 0, x:-50 }}
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.3, ease: "easeIn"}}

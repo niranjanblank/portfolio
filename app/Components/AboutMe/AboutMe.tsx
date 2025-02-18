@@ -22,24 +22,25 @@ return {
 }
 }
 
-export default async function AboutMe(){
-
+export default async function AboutMe() {
     return (
-        <div className="text-left">
-        <h3 className="text-6xl py-1 font-bold dark:text-white ">About Me.</h3>
-        <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-400 md:text-xl">
-    Passionate about building innovative solutions, I have expertise in  
-    <span className="text-sky-500"> Software engineering</span>, 
-    <span className="text-sky-500"> Data science</span>, and 
-    <span className="text-sky-500"> Full-stack development</span>. My journey spans a variety of projects, from developing 
-    <span className="text-sky-500"> Full-stack Web Applications</span> to tackling complex problems in 
-    <span className="text-sky-500"> Natural Language Processing</span>, and 
-    <span className="text-sky-500"> Computer Vision</span>.
-        </p>
-        <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-400 md:text-xl">
-        When I’m not coding, you’ll find me playing video games, reading light novels, or strumming my guitar.
-        </p>
-
-      </div>
-    )
+        <div className="text-left mb-20 px-10 md:px-20 lg:px-50 xl:px-80">
+            <h3 className="text-6xl py-1 font-bold dark:text-white">About Me.</h3>
+            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-400 md:text-xl">
+                Hey there! I’m passionate about building creative and impactful solutions, whether it’s designing seamless 
+                <span className="text-sky-500"> full-stack web applications</span>, diving into the depths of 
+                <span className="text-sky-500"> software engineering</span>, or solving tricky problems in 
+                <span className="text-sky-500"> data science</span>. I love taking on challenges in 
+                <span className="text-sky-500"> Natural Language Processing</span> and 
+                <span className="text-sky-500"> Computer Vision</span>, always looking for ways to push the boundaries of technology.
+            </p>
+            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-400 md:text-xl">
+                When I’m not coding, you’ll probably find me 
+                <span className="text-sky-500"> strumming my guitar</span>, 
+                <span className="text-sky-500"> getting lost in a great light novel</span>, or 
+                <span className="text-sky-500"> playing video games</span> (because who doesn’t love a good challenge?).
+            </p>
+         
+        </div>
+    );
 }

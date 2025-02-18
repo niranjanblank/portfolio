@@ -18,10 +18,10 @@ const PdfRender:React.FC = () => {
 
   useEffect(()=>{
     if(resolvedTheme=="dark") {
-        setcvFile("My_Resume_Short.pdf")
+        setcvFile("niranjan_resume.pdf")
       }
     else{
-        setcvFile("My_Resume_Short.pdf")
+        setcvFile("niranjan_resume.pdf")
     }
   },[resolvedTheme])
   

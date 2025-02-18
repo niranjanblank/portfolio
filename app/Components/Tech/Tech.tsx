@@ -38,19 +38,30 @@ const  Tech = async () => {
 
 
     return (
-        <div className="flex flex-col items-left mb-20" >
+        <div className="flex flex-col 
+            px-10 md:px-20 lg:px-50 xl:px-80
+            md:py-20
+            items-left mb-20 gap-10 
+            bg-[url('/bg.jpg')]  bg-cover bg-center ">
+
             <div>
-            <h2 className="text-lg py-1 mt-10 text-left text-gray-600 dark:text-gray-300">My Skills</h2>
-            <h3 className="text-6xl py-1 font-bold text-left dark:text-white">Technologies.</h3>
+                <h2 className="text-lg py-1 mt-10 text-left text-gray-600 dark:text-gray-300">My Skills</h2>
+                <h3 className="text-6xl py-1 font-bold text-left dark:text-white">Technologies.</h3>
             </div>
-            <div className="flex flex-wrap justify-center items-left w-full gap-2 md:gap-10">
-                {tech_data.map((item,index) => {
-                    return (
-                     
-                            <TechCard src={item.src} alt={item.alt} label={item.label} index={index} key={item.label} />
-                        
-                    );
-                })}
+            <div className="
+            flex flex-col 
+            items-center mb-20 
+            w-full" >
+                
+                <div className="flex flex-wrap justify-center items-left w-full   gap-2 md:gap-10 bg-red">
+                    {tech_data.map((item,index) => {
+                        return (
+                                <>
+                                <TechCard src={item.src} alt={item.alt} label={item.label} index={index} key={item.label} />
+                                </>
+                        );
+                    })}
+                </div>
             </div>
         </div>
     )

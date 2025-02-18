@@ -24,17 +24,17 @@ export default function Home() {
         pauseOnHover={false}
         theme="colored"
         />
-    <main className='flex flex-col pt-20 bg-white px-10 md:px-20 lg:px-40  dark:bg-gray-900 pb-10 '  >
-        <section className="flex-grow flex items-center min-h-screen justify-center">
+    <main className='flex flex-col pt-20 bg-white  dark:bg-gray-900 pb-10 '  >
+        <section className="flex-grow flex items-center min-h-screen justify-center px-10 md:px-20 lg:px-50 xl:px-80 ">
           <Intro/>
         </section>
 
-        <section>
+        <section> 
           <AboutMe/>
           <Tech/>
         </section>
-        <section>
-        <Portfolio/>
+        <section className='px-10 md:px-20 lg:px-50 xl:px-80 '>
+          <Portfolio/>
         </section>    
     </main>
     <Footer/>

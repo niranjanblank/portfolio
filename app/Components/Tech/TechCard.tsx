@@ -25,7 +25,7 @@ const TechCard: React.FC<TechProp> = (prop) => {
             whileTap={{ scale: 0.8 }}
             whileHover={{ scale: 1.2 }} // No delay on hover
             variants={cardVariants} // Use variants
-            className="text-center shadow-lg p-5 flex md:flex-grow-0 flex-grow flex-col md:p-10 rounded-xl md:my-10 w-1/3 h-auto md:w-fit md:h-auto bg-white dark:bg-gray-800"
+            className="text-center shadow-lg p-5 flex md:flex-grow-0 flex-grow flex-col md:p-10 rounded-xl  w-1/3 h-auto md:w-fit md:h-auto bg-white dark:bg-gray-800"
         >
 
             <div className="w-full h-20 md:w-24  md:h-24 relative">
