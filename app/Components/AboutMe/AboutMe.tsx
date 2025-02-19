@@ -25,7 +25,7 @@ return {
 export default async function AboutMe() {
     return (
         <div className="text-left mb-20 px-10 md:px-20 lg:px-50 xl:px-80">
-            <h3 className="text-6xl py-1 font-bold dark:text-white">About Me.</h3>
+            <h3 className="text-5xl md:text-6xl py-1 font-bold dark:text-white">About Me.</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-400 md:text-xl">
                 Hey there! I’m passionate about building creative and impactful solutions, whether it’s designing seamless 
                 <span className="text-sky-500"> full-stack web applications</span>, diving into the depths of 

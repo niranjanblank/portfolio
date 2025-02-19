@@ -34,7 +34,7 @@ const Portfolio = async () => {
     return (
         <>
         <div className='flex flex-col items-left'>
-            <h3 className="text-6xl py-1 font-bold dark:text-white">Portfolio.</h3>
+            <h3 className="text-5xl md:text-6xl py-1 font-bold dark:text-white">Projects.</h3>
             <p className="text-md py-2 leading-8 text-gray-800 text-left dark:text-gray-400 md:text-lg mb-4">
             Here are some of my favorite projects where I’ve put my skills to work! From full-stack development to backend engineering and a bit of data science, these showcase my passion for building things that are both functional and fun.</p>
         </div>

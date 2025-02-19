@@ -22,6 +22,7 @@ module.exports = {
     extend: {
       fontFamily: {
         burtons: "burtons",
+        mova: "mova"
       },
       typography: {
         DEFAULT: {

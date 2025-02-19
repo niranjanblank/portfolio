@@ -25,7 +25,9 @@ export default function Home() {
         theme="colored"
         />
     <main className='flex flex-col pt-20 bg-white  dark:bg-zinc-900 pb-10 '  >
-        <section className="flex-grow flex items-center min-h-screen justify-center px-10 md:px-20 lg:px-50 xl:px-80 ">
+        <section 
+        id="intro"
+        className="flex-grow flex items-center min-h-screen justify-center px-10 md:px-20 lg:px-50 xl:px-80 ">
           <Intro/>
         </section>
 
@@ -33,7 +35,9 @@ export default function Home() {
           <AboutMe/>
           <Tech/>
         </section>
-        <section className='px-10 md:px-20 lg:px-50 xl:px-80 '>
+        <section 
+        id="projects"
+        className='px-10 md:px-20 lg:px-50 xl:px-80 '>
           <Portfolio/>
         </section>    
     </main>

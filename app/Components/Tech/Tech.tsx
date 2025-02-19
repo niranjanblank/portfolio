@@ -46,8 +46,8 @@ const  Tech = async () => {
             >
 
             <div>
-                <h2 className="text-lg py-1 mt-10 text-left text-gray-600 dark:text-gray-300">My Skills</h2>
-                <h3 className="text-6xl py-1 font-bold text-left dark:text-white">Technologies.</h3>
+                <h2 className="text-lg py-1 mt-10 text-left text-gray-600 dark:text-gray-300 font-semibold">My Skills</h2>
+                <h3 className="text-5xl md:text-6xl py-1 font-bold text-left dark:text-white">Technologies.</h3>
             </div>
             <div className="
             flex flex-col 

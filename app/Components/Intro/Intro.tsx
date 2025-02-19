@@ -40,7 +40,7 @@ const Intro = async () => {
         <div className='flex flex-col-reverse justify-center items-center md:flex-row'>
             <div className='flex flex-col items-center justify-start'>
                 <div className="text-center p-10  dark:text-white "> 
-                    <h2 className='text-5xl py-2 text-sky-500 font-bold md:text-6xl lg:text-7xl '>
+                    <h2 className='text-5xl py-2 text-sky-500 font-bold md:text-6xl lg:text-7xl font-mova'>
                     NIRANJAN SHAH
                     </h2>
                     <h3 className="text-2xl py-2 md:text-3xl">{intro_data.title}</h3>
