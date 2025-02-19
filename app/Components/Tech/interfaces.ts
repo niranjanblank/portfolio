@@ -1,5 +1,6 @@
 export interface TechProp {
     src: string,
     alt: string,
-    label: string
+    label: string,
+    index: number
 }

@@ -17,13 +17,14 @@ async function getTechItems(): Promise<TechProp[]> {
         content_type: 'tech'
     })
 
-    const techItems: TechProp[] = response.items.map(item => {
+    const techItems: TechProp[] = response.items.map((item,index) => {
         const srcField = item.fields.src as { fields: { file: { url: string } } };
   
         return {
             label: item.fields.label as string,
             alt: item.fields.alt as string,
             src: `https://${srcField.fields.file.url}`,
+            index: index
         }
     })
 
@@ -37,16 +38,29 @@ const  Tech = async () => {
 
 
     return (
-        <div className="flex flex-col items-center mb-20" >
-            <h3 className="text-3xl py-1 mt-10 dark:text-white">Tech I Use</h3>
-            <div className="flex flex-wrap justify-center items-center max-w-6xl gap-2 md:gap-10">
-                {tech_data.map(item => {
-                    return (
-                     
-                            <TechCard src={item.src} alt={item.alt} label={item.label} key={item.label} />
-                        
-                    );
-                })}
+        <div className="flex flex-col 
+            px-10 md:px-20 lg:px-50 xl:px-80
+            md:py-20
+            items-left mb-20 gap-10 "
+          //  bg-[url('/bg_2.jpg')]  bg-cover bg-center "
+            >
+
+            <div>
+                <h2 className="text-lg py-1 mt-10 text-left text-gray-600 dark:text-gray-300 font-semibold">My Skills</h2>
+                <h3 className="text-5xl md:text-6xl py-1 font-bold text-left dark:text-white">Technologies.</h3>
+            </div>
+            <div className="
+            flex flex-col 
+            items-center mb-20 
+            w-full" >
+                
+                <div className="flex flex-wrap justify-center items-left w-full   gap-2 md:gap-10 bg-red">
+                    {tech_data.map((item,index) => {
+                        return (
+                                <TechCard src={item.src} alt={item.alt} label={item.label} index={index} key={item.label} />
+                        );
+                    })}
+                </div>
             </div>
         </div>
     )

@@ -1,5 +1,6 @@
 export interface PortfolioProp {
         src: string;
+        index: number;
         alt: string;
         title: string;
         link: string;

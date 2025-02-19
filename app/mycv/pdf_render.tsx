@@ -18,10 +18,10 @@ const PdfRender:React.FC = () => {
 
   useEffect(()=>{
     if(resolvedTheme=="dark") {
-        setcvFile("My_Resume_Short.pdf")
+        setcvFile("niranjan_resume.pdf")
       }
     else{
-        setcvFile("My_Resume_Short.pdf")
+        setcvFile("niranjan_resume.pdf")
     }
   },[resolvedTheme])
   
@@ -34,7 +34,9 @@ const PdfRender:React.FC = () => {
       <Document file={cvFile} onLoadSuccess={onDocumentLoadSuccess}>
      {Array.apply(null, Array(numPages))
     .map((x, i)=>i+1)
-    .map(page => <Page pageNumber={page} key={page} scale={2}  renderTextLayer={true} renderAnnotationLayer={false}/>)}
+    .map(page => <Page 
+    className="mb-2"
+    pageNumber={page} key={page} scale={2}  renderTextLayer={true} renderAnnotationLayer={false}/>)}
       </Document>
 
       {/* Download button to download the cv */}
