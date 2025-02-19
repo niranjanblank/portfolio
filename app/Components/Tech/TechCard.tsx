@@ -11,7 +11,7 @@ const cardVariants = {
     visible: (index: number) => ({
         opacity: 1,
         x: 0,
-        transition: { duration: 0.6, ease: "easeOut", delay: index * 0.2 } // Delay only on entrance
+        transition: { duration: 0.4, ease: "easeOut", delay: index * 0.1 } // Delay only on entrance
     }),
 };
 
