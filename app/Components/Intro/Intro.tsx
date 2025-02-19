@@ -55,7 +55,7 @@ const Intro = async () => {
                 </div>
             </div>
 
-            <div className="mx-auto mt-2 rounded-full w-64 h-64 md:h-96 md:w-80 lg:w-96 lg:h-[500px] bg-red-500" >
+            <div className="mx-auto mt-2 rounded-full w-64 h-64 md:h-96 md:w-80 lg:w-96 lg:h-[500px]" >
                 {/* <Image src={centralImage} alt="" /> */}
                 <Image src={intro_data.profile_image} alt="profile image" 
                 width={96}
