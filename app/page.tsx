@@ -24,7 +24,8 @@ export default function Home() {
         pauseOnHover={false}
         theme="colored"
         />
-    <main className='flex flex-col pt-20 bg-white  dark:bg-zinc-900 pb-10 '  >
+    <main className='flex flex-col pt-20 bg-white  dark:bg-zinc-900 pb-10 
+    '  >
         <section 
         id="intro"
         className="flex-grow flex items-center min-h-screen justify-center px-10 md:px-20 lg:px-50 xl:px-80 ">

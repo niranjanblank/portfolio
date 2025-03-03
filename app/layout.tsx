@@ -23,7 +23,9 @@ export default function RootLayout({
  
       <body className={inter.className}>
         <Providers>
-          <main className=" dark:bg-zinc-900" style={{colorScheme:'dark'}}>
+          <main className=" dark:bg-zinc-900 
+          
+          " style={{colorScheme:'dark'}}>
           <Navbar  />
           {children}
           </main>
