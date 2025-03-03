@@ -48,8 +48,8 @@ const  Tech = async () => {
             <div>
                 <h2 className="text-lg py-1 mt-10 text-left text-gray-600 dark:text-gray-300 font-semibold">My Skills</h2>
                 <h3 className="text-5xl md:text-6xl py-1 font-bold text-left text-gray-900 dark:text-white">Technologies.</h3>
-                <p className="py-5 text-gray-700 dark:text-gray-400 lg:w-2/3">I'm skilled in a range of modern technologies that enable me to build powerful and efficient solutions, 
-                    from web applications to backend systems and scalable infrastructure. Here are the key ones I specialize in.</p>
+                <p className="py-5 text-gray-700 dark:text-gray-400 lg:w-2/3">I&apos;m skilled in a range of modern technologies that enable me to build powerful and efficient solutions, 
+                from web applications to backend systems and scalable infrastructure. Here are the key ones I specialize in</p>
             </div>
             <div className="
             flex flex-col 
