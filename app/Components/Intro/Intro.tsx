@@ -49,9 +49,9 @@ const Intro = async () => {
                     </p>
                 </div>
                 <div className="text-5xl flex justify-center gap-16 pb-10 text-gray-600 dark:text-gray-400">
-                    <a href="https://www.facebook.com/niranjanBlanK/" className="cursor-pointer"><AiFillFacebook/></a>
-                    <a href="https://www.linkedin.com/in/niranjan-shah/" className="cursor-pointer"><AiFillLinkedin/></a>
-                    <a href="https://github.com/niranjanblank" className="cursor-pointer"><AiFillGithub/></a>
+                    <a href="https://www.facebook.com/niranjanBlanK/" className="cursor-pointer hover:text-gray-400 hover:dark:text-gray-200"><AiFillFacebook/></a>
+                    <a href="https://www.linkedin.com/in/niranjan-shah/" className="cursor-pointer hover:text-gray-400 hover:dark:text-gray-200"><AiFillLinkedin/></a>
+                    <a href="https://github.com/niranjanblank" className="cursor-pointer hover:text-gray-400 hover:dark:text-gray-200"><AiFillGithub/></a>
                 </div>
             </div>
 
