@@ -13,18 +13,9 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/b
 
 const PdfRender:React.FC = () => {
   const [numPages, setNumPages] = useState<number>();
-  const [cvFile,setcvFile] = useState("")
-  const {resolvedTheme, setTheme} = useTheme()
+  const [cvFile,setcvFile] = useState("niranjan_resume.pdf")
 
-  useEffect(()=>{
-    if(resolvedTheme=="dark") {
-        setcvFile("niranjan_resume.pdf")
-      }
-    else{
-        setcvFile("niranjan_resume.pdf")
-    }
-  },[resolvedTheme])
-  
+
   function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
     setNumPages(numPages);
   }

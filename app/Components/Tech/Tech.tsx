@@ -47,14 +47,16 @@ const  Tech = async () => {
 
             <div>
                 <h2 className="text-lg py-1 mt-10 text-left text-gray-600 dark:text-gray-300 font-semibold">My Skills</h2>
-                <h3 className="text-5xl md:text-6xl py-1 font-bold text-left dark:text-white">Technologies.</h3>
+                <h3 className="text-5xl md:text-6xl py-1 font-bold text-left text-gray-900 dark:text-white">Technologies.</h3>
+                <p className="py-5 text-gray-700 dark:text-gray-400 lg:w-2/3">I&apos;m skilled in a range of modern technologies that enable me to build powerful and efficient solutions, 
+                from web applications to backend systems and scalable infrastructure. Here are the key ones I specialize in</p>
             </div>
             <div className="
             flex flex-col 
             items-center mb-20 
             w-full" >
                 
-                <div className="flex flex-wrap justify-center items-left w-full   gap-2 md:gap-10 bg-red">
+                <div className="flex flex-wrap justify-center lg:justify-start items-left w-full   gap-2 md:gap-5 bg-red">
                     {tech_data.map((item,index) => {
                         return (
                                 <TechCard src={item.src} alt={item.alt} label={item.label} index={index} key={item.label} />
