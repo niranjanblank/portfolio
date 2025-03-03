@@ -27,13 +27,20 @@ const PortfolioItem:React.FC<PortfolioProp> = (prop) => {
     custom={prop.index} // Pass index to variants
     initial="hidden"
     whileInView="visible"
-    viewport={{ once: true, amount: 0.3 }}
-    whileHover={{ scale: 1.05 }} // No delay on hover
+    viewport={{ once: true, amount: 0.2 }}
+    whileHover={{ scale: 1.02 }} // No delay on hover
     variants={cardVariants} // Use variants
-    className='shadow-lg rounded-lg p-4 relative
-     dark:bg-zinc-800'>
+    className='shadow-sm rounded-lg 
+    p-4 relative
+    bg-white dark:bg-zinc-800
+    hover:bg-gray-100 hover:dark:bg-zinc-700 
+    border dark:border-transparent
+    hover:border hover:dark:border-gray-600
+    hover:border-gray-200'>
         {/* link for github repo */}
-         <Link className="absolute text-white right-6 top-6 w-10 h-10 bg-gray-500 rounded-full flex justify-center items-center cursor-pointer
+         <Link className="absolute text-white 
+         right-6 top-6 w-10 h-10 
+         bg-gray-500 rounded-full flex justify-center items-center cursor-pointer
          bg-gradient-to-r from-indigo-500 to-indigo-900
          transition ease-in-out hover:-translate-y-1  hover:scale-105
          " 
@@ -48,8 +55,8 @@ const PortfolioItem:React.FC<PortfolioProp> = (prop) => {
           unoptimized={true}
         className='rounded-md w-full'/>
         <div>
-            <h1 className="text-3xl font-bold my-4 dark:text-white">{prop.title}</h1>
-            <p className="text-black dark:text-gray-400">
+            <h1 className="text-3xl font-bold my-4 text-gray-800 dark:text-white">{prop.title}</h1>
+            <p className="text-gray-700 dark:text-gray-300">
             {prop.desc}
             </p>
             <div className="my-3 flex flex-wrap">

@@ -32,7 +32,7 @@ export default function Home() {
         </section>
 
         <section> 
-          <AboutMe/>
+          {/* <AboutMe/> */}
           <Tech/>
         </section>
         <section 
