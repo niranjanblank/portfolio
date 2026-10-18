@@ -1,35 +1,22 @@
 'use client'
-import { useForm, ValidationError } from "@formspree/react";
 import { useFormik } from "formik";
 import * as Yup from "yup"
-import axios from 'axios'
-import {toast} from 'react-toastify'
+
+const CONTACT_EMAIL = "niranjanshah474@gmail.com"
+
 const ContactForm = () => {
 
     const formik = useFormik({
         initialValues: {
           name: '',
           subject: '',
-          email: '',
           message: ''
         },
-        onSubmit: async (values) => {
-          // try {
-            const response = await toast.promise(axios.post('/api/email', values),
-            {
-              pending: 'Sending Email',
-              success: 'Email Sent Successfully',
-              error: 'Email couldnt be sent 🤯'
-            })
-            
-  
-          //   // show toast if mail is sent
-          //   if(response.data.isMailSent){
-          //     toast.success("Mail Sent")
-          //   }
-          // } catch (error) {
-          //   console.error(error);
-          // }
+        onSubmit: (values) => {
+          // open the visitor's mail client with the message prefilled
+          const subject = encodeURIComponent(values.subject)
+          const body = encodeURIComponent(`${values.message}\n\n- ${values.name}`)
+          window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`
         },
         validationSchema: Yup.object({
           name: Yup.string()
@@ -37,8 +24,6 @@ const ContactForm = () => {
             .required("Required"),
           subject: Yup.string()
             .required("Required"),
-          email: Yup.string()
-            .email("Valid Email Required").required("Required"),
           message: Yup.string().required("Message Required")
         })
       });
@@ -72,18 +57,6 @@ const ContactForm = () => {
                         onBlur={formik.handleBlur}
                         />
                         {(formik.touched.subject && formik.errors.subject) && <p className="text-red-600 pt-2 text-xs">{formik.errors.subject}</p>}
-                    </div>
-                    <div>
-                        <label className="block">Email</label>
-                        <input 
-                        className="block bg-gray-200 w-full rounded-sm py-2 px-2 text-black" 
-                        placeholder="e.g. richardp@example.com" 
-                        name="email" type="email"
-                        value={formik.values.email}
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        />
-                        {(formik.touched.email && formik.errors.email) && <p className="text-red-600 pt-2 text-xs">{formik.errors.email}</p>}
                     </div>
                     <div>
                         <label className="block">Message</label>
