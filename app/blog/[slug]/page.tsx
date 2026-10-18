@@ -41,12 +41,13 @@ async function getBlog(slug: string): Promise<BlogPost> {
 
 export default async function BlogDetails(
     {params}:{
-        params: {
+        params: Promise<{
             slug: string
-        }
+        }>
     }
 ){
-    const blog = await getBlog(params.slug)
+    const { slug } = await params
+    const blog = await getBlog(slug)
 
     return (
         <div className="flex flex-col w-full md:w-3/4 lg:w-2/4">

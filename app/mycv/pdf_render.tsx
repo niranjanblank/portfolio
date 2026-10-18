@@ -1,29 +1,16 @@
 'use client'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Document, Page } from 'react-pdf';
 import { pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/TextLayer.css';
 import { FiDownload } from 'react-icons/fi';
 import { cvDownloadHandler } from "@/app/lib/utils"
 
-
-import {useTheme} from 'next-themes'
-
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
 const PdfRender:React.FC = () => {
   const [numPages, setNumPages] = useState<number>();
-  const [cvFile,setcvFile] = useState("")
-  const {resolvedTheme, setTheme} = useTheme()
-
-  useEffect(()=>{
-    if(resolvedTheme=="dark") {
-        setcvFile("niranjan_resume.pdf")
-      }
-    else{
-        setcvFile("niranjan_resume.pdf")
-    }
-  },[resolvedTheme])
+  const cvFile = "niranjan_resume.pdf"
   
   function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
     setNumPages(numPages);

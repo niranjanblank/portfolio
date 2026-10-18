@@ -8,17 +8,11 @@ const nextConfig = {
             },
           ],
     },
-    webpack: (config, { isServer }) => {
-        // for react-pdf
-        config.resolve.alias.canvas = false;
-        if (!isServer) {
-            // Fixes npm packages that depend on `aws-crt` module
-            config.resolve.fallback = {
-                ...config.resolve.fallback,
-                'aws-crt': false,
-            };
-        }
-        return config;
+    turbopack: {
+        resolveAlias: {
+            // for react-pdf
+            canvas: './app/lib/empty-module.ts',
+        },
     },
 }
 

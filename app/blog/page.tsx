@@ -3,16 +3,17 @@ import { BlogList } from "./BlogList";
 import { BlogListSkeleton } from "../Components/Blog/BlogListSkeleton";
 
 export const revalidate = 10
-export default function Blog({
+export default async function Blog({
     searchParams }: {
-        searchParams: {
+        searchParams: Promise<{
             [key: string]: string | string[] | undefined
-        }
+        }>
     }) {
 
     //  getting the query parameters which will be used for pagination
-    const page = typeof searchParams.page === 'string' ? Number(searchParams.page): 1
-    const limit = typeof searchParams.limit === 'string' ? Number(searchParams.limit) : 6
+    const { page: pageParam, limit: limitParam } = await searchParams
+    const page = typeof pageParam === 'string' ? Number(pageParam): 1
+    const limit = typeof limitParam === 'string' ? Number(limitParam) : 6
 
     return (
         <div className="flex justify-center flex-col container">
