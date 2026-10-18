@@ -7,8 +7,14 @@ interface BlogProp {
 
 export default function BlogCard({blog}: BlogProp) {
     return (
-        <Link href={`/blog/${blog.slug}`} className="flex flex-col my-2 dark:bg-zinc-800  rounded-lg shadow-lg
-        transition ease-in-out hover:-translate-y-1  hover:scale-105
+        <Link href={`/blog/${blog.slug}`} className="flex flex-col my-2 
+        rounded-lg shadow-md
+        transition ease-in-out hover:-translate-y-1  hover:scale-101
+          bg-white dark:bg-zinc-800
+            hover:bg-gray-100 hover:dark:bg-zinc-700 
+            border dark:border-transparent
+            hover:border hover:dark:border-gray-600
+            hover:border-gray-200
         ">
      
         <div className="relative h-72 md:h-50">
